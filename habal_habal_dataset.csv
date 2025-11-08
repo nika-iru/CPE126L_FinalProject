@@ -1,0 +1,520 @@
+Distance,Passenger_Type,Time_of_Day,Road_Condition,Fare_Charged,Weather_Condition
+5.5,Student,Morning Peak,Paved,116,Clear
+8.9,Student,Afternoon Peak,Paved,135,Clear
+15.0,Regular,Morning Peak,Paved,150,Clear
+13.5,Student,Evening,Paved,136,Clear
+14.4,Student,Midday,Paved,375,Clear
+4.6,Regular,Midday,Paved,61,Clear
+1.7,Regular,Midday,Paved,35,Clear
+1.6,Student,Afternoon Peak,Paved,38,Clear
+12.6,Student,Morning Peak,Paved,161,Overcast
+19.2,Student,Afternoon Peak,Paved,234,Clear
+9.8,Regular,Evening,Paved,122,Clear
+1.0,Student,Midday,Paved,26,Clear
+7.8,Student,Afternoon Peak,Paved,242,Clear
+8.6,Regular,Evening,Paved,106,Overcast
+3.0,Regular,Afternoon Peak,Paved,50,Clear
+18.5,Student,Midday,Paved,186,Overcast
+1.0,Student,Midday,Paved,17,Clear
+14.3,Regular,Afternoon Peak,Paved,329,Clear
+7.3,Regular,Midday,Paved,249,Clear
+4.7,Student,Afternoon Peak,Paved,77,Clear
+15.6,Student,Midday,Paved,149,Clear
+17.0,Regular,Evening,Paved,529,Clear
+12.5,Student,Evening,Paved,124,Clear
+6.4,Student,Afternoon Peak,Paved,75,Overcast
+1.0,Student,Morning Peak,Paved,43,Clear
+13.3,Regular,Midday,Unpaved,281,Clear
+6.1,Student,Evening,Paved,125,Overcast
+9.6,Regular,Midday,Paved,287,Clear
+1.0,Student,Evening,Paved,64,Clear
+7.1,Student,Morning Peak,Paved,134,Clear
+18.0,Student,Midday,Paved,254,Clear
+8.3,Regular,Morning Peak,Paved,116,Overcast
+1.0,Student,Midday,Paved,15,Clear
+3.5,Student,Evening,Paved,30,Overcast
+3.8,Student,Evening,Paved,67,Clear
+2.9,Student,Evening,Paved,37,Clear
+1.0,Student,Midday,Paved,26,Clear
+10.2,Regular,Midday,Paved,116,Clear
+9.3,Student,Evening,Paved,109,Overcast
+12.1,Regular,Midday,Paved,476,Clear
+8.7,Regular,Morning Peak,Paved,225,Overcast
+1.0,Student,Afternoon Peak,Paved,24,Clear
+2.4,Student,Midday,Paved,39,Clear
+7.7,Student,Midday,Paved,88,Overcast
+8.5,Student,Morning Peak,Unpaved,173,Clear
+9.5,Student,Afternoon Peak,Paved,111,Clear
+1.0,Student,Afternoon Peak,Unpaved,37,Clear
+5.5,Regular,Morning Peak,Paved,76,Clear
+7.2,Regular,Evening,Unpaved,241,Clear
+14.8,Regular,Afternoon Peak,Unpaved,363,Clear
+1.0,Student,Afternoon Peak,Paved,59,Clear
+1.4,Student,Morning Peak,Paved,44,Overcast
+8.0,Student,Evening,Paved,84,Clear
+8.6,Regular,Morning Peak,Paved,107,Clear
+5.3,Student,Morning Peak,Unpaved,81,Clear
+9.3,Student,Afternoon Peak,Paved,214,Overcast
+9.4,Student,Evening,Paved,96,Clear
+13.2,Regular,Evening,Paved,342,Clear
+1.5,Student,Evening,Paved,15,Clear
+8.5,Student,Evening,Paved,278,Clear
+10.6,Student,Midday,Paved,250,Clear
+10.7,Student,Evening,Paved,103,Clear
+9.3,Student,Afternoon Peak,Paved,108,Clear
+4.1,Student,Evening,Paved,78,Clear
+15.9,Student,Midday,Paved,162,Clear
+2.4,Student,Midday,Paved,33,Clear
+7.7,Student,Midday,Paved,85,Clear
+5.6,Regular,Afternoon Peak,Paved,225,Clear
+9.2,Student,Midday,Paved,90,Clear
+2.2,Regular,Evening,Paved,36,Overcast
+6.0,Regular,Afternoon Peak,Paved,80,Clear
+5.1,Student,Midday,Paved,117,Clear
+4.0,Student,Afternoon Peak,Paved,20,Clear
+8.0,Student,Midday,Paved,150,Clear
+6.6,Student,Evening,Paved,70,Clear
+1.0,Student,Morning Peak,Paved,25,Clear
+15.0,Regular,Midday,Paved,441,Clear
+1.9,Student,Midday,Paved,43,Clear
+2.1,Student,Evening,Paved,36,Clear
+2.2,Student,Midday,Paved,34,Clear
+7.1,Student,Evening,Paved,83,Clear
+12.2,Student,Morning Peak,Paved,136,Overcast
+4.5,Student,Midday,Paved,12,Overcast
+6.0,Student,Evening,Paved,67,Clear
+10.7,Student,Midday,Paved,121,Overcast
+1.0,Student,Evening,Paved,31,Clear
+6.7,Student,Afternoon Peak,Paved,251,Clear
+13.1,Student,Morning Peak,Paved,331,Clear
+8.2,Regular,Afternoon Peak,Paved,252,Clear
+10.4,Student,Midday,Paved,270,Clear
+2.5,Student,Afternoon Peak,Paved,127,Overcast
+1.0,Regular,Midday,Paved,43,Clear
+1.0,Student,Morning Peak,Paved,25,Clear
+9.9,Regular,Morning Peak,Paved,233,Clear
+13.2,Regular,Evening,Paved,363,Clear
+1.8,Student,Afternoon Peak,Paved,33,Clear
+10.8,Student,Midday,Paved,105,Clear
+7.0,Student,Midday,Paved,74,Overcast
+7.3,Student,Evening,Paved,81,Clear
+10.9,Regular,Afternoon Peak,Paved,297,Clear
+14.7,Student,Midday,Paved,367,Clear
+10.8,Regular,Afternoon Peak,Paved,150,Clear
+10.9,Student,Midday,Paved,110,Clear
+16.1,Student,Midday,Paved,311,Overcast
+5.5,Student,Morning Peak,Paved,62,Clear
+1.0,Student,Evening,Paved,15,Clear
+1.0,Regular,Morning Peak,Paved,29,Clear
+1.0,Student,Midday,Paved,36,Clear
+8.3,Student,Afternoon Peak,Paved,210,Clear
+2.1,Student,Afternoon Peak,Paved,39,Clear
+8.2,Regular,Afternoon Peak,Paved,312,Clear
+10.3,Regular,Midday,Paved,365,Clear
+15.3,Student,Midday,Paved,323,Overcast
+1.0,Regular,Midday,Paved,31,Overcast
+8.3,Student,Midday,Paved,89,Clear
+9.8,Student,Afternoon Peak,Paved,115,Clear
+12.9,Student,Midday,Paved,510,Clear
+12.3,Regular,Midday,Paved,147,Overcast
+16.9,Student,Midday,Paved,165,Clear
+10.1,Student,Morning Peak,Paved,179,Clear
+3.4,Student,Evening,Paved,57,Overcast
+1.0,Student,Morning Peak,Paved,32,Clear
+2.1,Student,Morning Peak,Paved,47,Clear
+8.5,Student,Afternoon Peak,Paved,232,Clear
+11.0,Student,Midday,Paved,150,Clear
+10.9,Student,Morning Peak,Paved,123,Clear
+1.0,Student,Morning Peak,Paved,21,Clear
+4.7,Student,Evening,Paved,70,Overcast
+9.5,Student,Morning Peak,Paved,129,Clear
+11.7,Student,Afternoon Peak,Paved,295,Clear
+1.0,Student,Midday,Paved,21,Clear
+13.5,Regular,Afternoon Peak,Paved,393,Clear
+1.0,Student,Evening,Paved,45,Clear
+8.3,Regular,Evening,Paved,342,Clear
+13.5,Regular,Midday,Paved,236,Clear
+7.9,Student,Midday,Unpaved,97,Clear
+3.5,Student,Morning Peak,Paved,96,Clear
+4.9,Regular,Evening,Paved,103,Clear
+1.0,Student,Afternoon Peak,Paved,31,Clear
+8.5,Student,Afternoon Peak,Paved,116,Clear
+5.8,Student,Afternoon Peak,Paved,92,Clear
+17.2,Regular,Afternoon Peak,Paved,592,Clear
+10.6,Student,Morning Peak,Paved,114,Clear
+15.0,Regular,Midday,Paved,163,Clear
+6.5,Student,Afternoon Peak,Paved,258,Clear
+1.0,Regular,Afternoon Peak,Paved,34,Overcast
+5.9,Regular,Afternoon Peak,Paved,171,Overcast
+14.6,Regular,Afternoon Peak,Unpaved,206,Clear
+14.6,Student,Morning Peak,Paved,175,Overcast
+2.7,Student,Midday,Paved,80,Clear
+2.9,Student,Evening,Paved,126,Clear
+5.1,Student,Afternoon Peak,Paved,142,Clear
+6.0,Student,Afternoon Peak,Paved,20,Clear
+4.3,Regular,Afternoon Peak,Paved,74,Clear
+10.0,Regular,Evening,Paved,185,Clear
+12.8,Regular,Midday,Paved,304,Clear
+3.1,Student,Afternoon Peak,Paved,49,Clear
+1.5,Student,Afternoon Peak,Paved,34,Clear
+10.2,Student,Midday,Paved,248,Clear
+1.4,Regular,Afternoon Peak,Paved,27,Overcast
+1.0,Student,Evening,Unpaved,30,Clear
+10.0,Student,Afternoon Peak,Paved,151,Overcast
+10.6,Student,Afternoon Peak,Paved,129,Clear
+5.7,Regular,Afternoon Peak,Paved,76,Clear
+10.0,Student,Morning Peak,Paved,40,Clear
+2.0,Student,Morning Peak,Paved,57,Clear
+8.4,Student,Midday,Paved,83,Clear
+9.5,Student,Morning Peak,Paved,110,Clear
+2.5,Student,Evening,Paved,60,Overcast
+1.0,Student,Evening,Paved,34,Clear
+1.0,Regular,Afternoon Peak,Paved,36,Overcast
+4.3,Regular,Morning Peak,Paved,100,Clear
+13.6,Regular,Midday,Paved,147,Clear
+1.0,Student,Midday,Paved,40,Clear
+4.9,Student,Midday,Paved,62,Clear
+3.4,Regular,Midday,Paved,119,Clear
+4.3,Student,Afternoon Peak,Paved,66,Clear
+3.8,Student,Afternoon Peak,Paved,75,Clear
+8.6,Student,Midday,Paved,230,Clear
+2.2,Regular,Afternoon Peak,Paved,70,Clear
+7.7,Student,Evening,Paved,280,Clear
+7.7,Student,Midday,Paved,79,Clear
+24.0,Student,Midday,Paved,80,Clear
+11.1,Regular,Midday,Paved,231,Clear
+5.7,Student,Midday,Paved,64,Clear
+4.6,Student,Evening,Paved,113,Clear
+8.2,Regular,Midday,Paved,115,Clear
+12.2,Regular,Afternoon Peak,Paved,161,Clear
+8.4,Student,Afternoon Peak,Paved,93,Clear
+8.8,Student,Morning Peak,Paved,192,Clear
+1.0,Regular,Morning Peak,Paved,35,Overcast
+6.5,Student,Afternoon Peak,Paved,90,Clear
+1.0,Regular,Afternoon Peak,Paved,22,Clear
+8.0,Student,Evening,Paved,360,Clear
+7.7,Regular,Afternoon Peak,Paved,165,Clear
+7.4,Student,Morning Peak,Paved,117,Clear
+9.0,Student,Evening,Paved,124,Clear
+2.9,Student,Afternoon Peak,Paved,90,Clear
+14.6,Regular,Midday,Paved,426,Clear
+5.2,Student,Evening,Unpaved,69,Clear
+2.0,Student,Evening,Paved,28,Clear
+5.9,Student,Midday,Paved,75,Clear
+16.5,Student,Morning Peak,Paved,189,Overcast
+3.2,Student,Morning Peak,Paved,55,Clear
+3.7,Student,Afternoon Peak,Paved,55,Clear
+5.6,Regular,Midday,Paved,73,Clear
+10.7,Student,Midday,Paved,266,Clear
+7.0,Student,Midday,Paved,78,Clear
+9.1,Regular,Afternoon Peak,Paved,163,Clear
+7.1,Regular,Afternoon Peak,Paved,184,Clear
+6.9,Regular,Midday,Paved,169,Clear
+3.3,Student,Midday,Unpaved,49,Clear
+10.4,Regular,Midday,Paved,116,Clear
+18.8,Student,Evening,Paved,194,Clear
+9.7,Student,Afternoon Peak,Paved,378,Overcast
+3.3,Student,Midday,Paved,46,Clear
+3.2,Student,Evening,Paved,130,Clear
+1.0,Regular,Evening,Paved,26,Overcast
+4.3,Student,Evening,Paved,84,Clear
+22.2,Student,Morning Peak,Paved,233,Clear
+1.6,Regular,Morning Peak,Paved,31,Clear
+10.9,Student,Morning Peak,Unpaved,127,Clear
+8.6,Student,Evening,Paved,320,Clear
+3.1,Student,Midday,Paved,44,Overcast
+10.0,Regular,Morning Peak,Paved,137,Overcast
+6.6,Student,Midday,Paved,247,Clear
+4.9,Regular,Evening,Paved,238,Overcast
+1.3,Student,Morning Peak,Paved,58,Clear
+2.9,Student,Evening,Paved,61,Clear
+6.3,Student,Morning Peak,Paved,75,Overcast
+12.3,Student,Afternoon Peak,Paved,190,Clear
+16.4,Regular,Midday,Paved,181,Clear
+2.4,Student,Evening,Paved,38,Clear
+5.7,Student,Midday,Paved,158,Clear
+4.4,Student,Midday,Paved,47,Clear
+3.7,Student,Afternoon Peak,Paved,78,Clear
+10.5,Student,Midday,Paved,220,Clear
+6.6,Student,Morning Peak,Paved,83,Clear
+10.5,Student,Evening,Paved,112,Clear
+3.6,Student,Midday,Paved,187,Clear
+5.7,Student,Afternoon Peak,Paved,226,Clear
+6.3,Student,Midday,Paved,66,Clear
+11.4,Student,Afternoon Peak,Paved,142,Overcast
+9.5,Student,Evening,Paved,93,Clear
+4.4,Student,Afternoon Peak,Paved,201,Clear
+1.0,Regular,Midday,Paved,27,Clear
+9.0,Student,Evening,Paved,96,Clear
+7.9,Regular,Evening,Paved,204,Clear
+1.2,Student,Evening,Paved,37,Clear
+3.7,Regular,Evening,Paved,65,Overcast
+3.9,Student,Evening,Paved,70,Clear
+2.3,Student,Evening,Paved,32,Clear
+10.2,Regular,Evening,Paved,279,Clear
+8.4,Student,Morning Peak,Paved,177,Clear
+8.6,Student,Midday,Paved,92,Clear
+13.3,Student,Afternoon Peak,Paved,215,Clear
+15.5,Student,Afternoon Peak,Paved,303,Clear
+13.5,Student,Evening,Paved,135,Clear
+18.4,Student,Evening,Paved,719,Clear
+10.6,Regular,Evening,Paved,168,Clear
+4.6,Student,Afternoon Peak,Paved,103,Overcast
+20.5,Student,Midday,Paved,243,Clear
+12.5,Student,Midday,Paved,345,Clear
+4.0,Student,Midday,Paved,48,Clear
+5.3,Regular,Evening,Paved,77,Overcast
+1.0,Student,Midday,Paved,28,Clear
+1.3,Student,Evening,Paved,24,Clear
+7.7,Regular,Morning Peak,Paved,105,Clear
+15.8,Student,Afternoon Peak,Paved,444,Clear
+4.3,Student,Evening,Paved,58,Clear
+1.0,Student,Afternoon Peak,Paved,47,Clear
+14.1,Student,Morning Peak,Paved,167,Overcast
+1.0,Student,Morning Peak,Paved,26,Clear
+9.5,Student,Midday,Paved,147,Clear
+7.6,Regular,Midday,Paved,88,Clear
+6.6,Student,Afternoon Peak,Paved,86,Clear
+6.1,Regular,Morning Peak,Paved,83,Clear
+5.6,Regular,Evening,Paved,72,Overcast
+3.9,Regular,Evening,Paved,75,Clear
+5.4,Student,Midday,Paved,71,Clear
+8.7,Student,Afternoon Peak,Paved,274,Clear
+5.6,Regular,Evening,Paved,80,Clear
+11.7,Regular,Evening,Paved,133,Clear
+16.5,Student,Evening,Paved,472,Overcast
+3.9,Student,Afternoon Peak,Paved,51,Clear
+9.8,Regular,Afternoon Peak,Paved,123,Clear
+1.0,Student,Evening,Paved,40,Clear
+1.8,Student,Evening,Paved,62,Clear
+5.3,Student,Midday,Paved,60,Clear
+3.9,Student,Evening,Paved,51,Clear
+16.1,Student,Evening,Paved,161,Clear
+3.6,Student,Evening,Paved,37,Clear
+1.0,Regular,Midday,Paved,22,Clear
+1.0,Student,Afternoon Peak,Paved,39,Clear
+11.9,Student,Midday,Paved,119,Clear
+1.0,Student,Afternoon Peak,Paved,38,Clear
+1.0,Regular,Afternoon Peak,Paved,36,Clear
+10.5,Student,Midday,Paved,200,Clear
+7.7,Student,Evening,Paved,407,Clear
+15.4,Student,Afternoon Peak,Paved,265,Clear
+4.8,Student,Afternoon Peak,Paved,60,Clear
+6.6,Student,Midday,Paved,71,Clear
+10.1,Student,Evening,Paved,104,Clear
+7.6,Regular,Midday,Paved,89,Clear
+18.4,Student,Evening,Paved,174,Clear
+6.5,Student,Morning Peak,Paved,77,Clear
+1.2,Regular,Midday,Paved,36,Clear
+17.9,Regular,Midday,Paved,192,Clear
+5.6,Regular,Evening,Paved,193,Overcast
+11.8,Student,Morning Peak,Paved,198,Overcast
+5.4,Student,Evening,Paved,107,Clear
+7.2,Student,Evening,Paved,87,Clear
+9.1,Regular,Afternoon Peak,Paved,228,Clear
+1.0,Student,Morning Peak,Paved,35,Overcast
+13.4,Student,Morning Peak,Paved,331,Clear
+6.2,Regular,Midday,Paved,108,Clear
+6.5,Student,Midday,Paved,137,Clear
+3.1,Regular,Midday,Paved,79,Clear
+9.6,Student,Afternoon Peak,Paved,151,Clear
+8.6,Student,Afternoon Peak,Paved,102,Clear
+6.4,Student,Morning Peak,Paved,113,Clear
+12.6,Student,Morning Peak,Paved,168,Clear
+15.9,Student,Midday,Paved,159,Overcast
+2.9,Student,Midday,Paved,81,Clear
+2.5,Student,Midday,Paved,73,Overcast
+21.1,Student,Morning Peak,Paved,322,Overcast
+11.7,Student,Afternoon Peak,Paved,160,Clear
+14.9,Regular,Morning Peak,Paved,327,Clear
+10.3,Student,Afternoon Peak,Paved,118,Clear
+1.4,Student,Midday,Paved,30,Clear
+1.0,Student,Evening,Paved,40,Clear
+1.0,Student,Evening,Paved,35,Clear
+1.0,Student,Morning Peak,Paved,37,Clear
+1.0,Student,Evening,Paved,24,Clear
+1.6,Student,Morning Peak,Paved,88,Clear
+7.4,Student,Morning Peak,Paved,182,Clear
+5.7,Student,Morning Peak,Paved,200,Clear
+1.0,Regular,Evening,Paved,40,Clear
+5.5,Student,Afternoon Peak,Paved,59,Clear
+3.7,Student,Evening,Paved,154,Clear
+11.1,Student,Afternoon Peak,Paved,128,Clear
+3.2,Student,Evening,Paved,114,Overcast
+6.6,Regular,Midday,Paved,20,Clear
+4.5,Regular,Evening,Paved,53,Clear
+10.2,Student,Evening,Paved,104,Clear
+7.8,Student,Morning Peak,Paved,243,Clear
+1.0,Student,Afternoon Peak,Paved,39,Clear
+9.6,Student,Evening,Paved,194,Clear
+3.8,Regular,Afternoon Peak,Paved,83,Clear
+5.7,Student,Morning Peak,Paved,76,Clear
+3.8,Student,Midday,Paved,45,Clear
+4.2,Student,Afternoon Peak,Paved,123,Clear
+5.0,Student,Midday,Paved,113,Overcast
+1.0,Regular,Evening,Paved,34,Clear
+7.9,Student,Morning Peak,Paved,98,Clear
+16.5,Student,Afternoon Peak,Paved,486,Clear
+10.7,Regular,Afternoon Peak,Paved,149,Clear
+1.0,Student,Midday,Paved,22,Clear
+11.5,Regular,Morning Peak,Paved,144,Clear
+1.9,Student,Evening,Paved,46,Clear
+1.0,Student,Morning Peak,Paved,29,Clear
+11.8,Student,Afternoon Peak,Paved,178,Clear
+7.8,Student,Midday,Paved,90,Clear
+2.0,Regular,Midday,Paved,96,Clear
+5.3,Regular,Afternoon Peak,Paved,74,Clear
+10.0,Regular,Afternoon Peak,Unpaved,100,Clear
+8.3,Regular,Afternoon Peak,Paved,241,Clear
+4.2,Student,Evening,Paved,85,Clear
+1.0,Student,Afternoon Peak,Paved,59,Clear
+1.0,Regular,Morning Peak,Paved,45,Clear
+14.6,Student,Midday,Paved,322,Clear
+11.0,Student,Evening,Paved,191,Overcast
+6.5,Regular,Midday,Paved,244,Clear
+3.6,Regular,Midday,Paved,90,Clear
+1.0,Student,Afternoon Peak,Paved,39,Clear
+8.6,Student,Morning Peak,Paved,163,Overcast
+11.9,Student,Midday,Paved,123,Clear
+18.6,Student,Midday,Paved,488,Clear
+11.3,Student,Afternoon Peak,Paved,492,Clear
+5.1,Student,Afternoon Peak,Paved,196,Clear
+5.8,Regular,Morning Peak,Paved,75,Clear
+1.0,Student,Morning Peak,Paved,25,Clear
+5.6,Student,Midday,Paved,140,Overcast
+3.8,Regular,Midday,Paved,155,Clear
+4.2,Student,Afternoon Peak,Paved,136,Clear
+9.0,Student,Afternoon Peak,Paved,116,Clear
+7.5,Student,Morning Peak,Paved,127,Clear
+10.5,Student,Afternoon Peak,Paved,122,Clear
+6.8,Regular,Midday,Paved,170,Clear
+2.0,Regular,Afternoon Peak,Paved,40,Overcast
+8.6,Student,Afternoon Peak,Paved,101,Clear
+13.7,Regular,Midday,Paved,164,Overcast
+5.7,Regular,Afternoon Peak,Paved,118,Clear
+11.1,Student,Midday,Paved,107,Clear
+1.0,Student,Afternoon Peak,Paved,39,Clear
+3.7,Student,Afternoon Peak,Paved,61,Clear
+1.0,Student,Evening,Paved,15,Clear
+1.0,Student,Afternoon Peak,Paved,20,Clear
+11.1,Student,Midday,Paved,112,Clear
+7.8,Regular,Midday,Paved,163,Clear
+6.8,Student,Midday,Paved,99,Clear
+17.4,Student,Afternoon Peak,Paved,210,Overcast
+1.1,Student,Midday,Paved,72,Clear
+2.4,Student,Midday,Unpaved,95,Clear
+19.0,Student,Evening,Paved,262,Clear
+1.4,Student,Morning Peak,Paved,36,Clear
+1.0,Regular,Evening,Paved,21,Clear
+3.2,Student,Midday,Paved,44,Overcast
+1.3,Student,Afternoon Peak,Paved,31,Clear
+6.3,Student,Midday,Paved,70,Overcast
+9.3,Student,Afternoon Peak,Paved,135,Clear
+9.8,Student,Midday,Paved,183,Clear
+8.5,Student,Morning Peak,Paved,101,Clear
+8.5,Student,Evening,Paved,96,Overcast
+9.9,Student,Afternoon Peak,Paved,117,Clear
+8.5,Student,Morning Peak,Paved,184,Clear
+1.0,Student,Afternoon Peak,Paved,42,Clear
+4.5,Student,Morning Peak,Paved,64,Clear
+6.4,Student,Evening,Paved,235,Overcast
+12.3,Student,Afternoon Peak,Paved,149,Clear
+1.0,Regular,Afternoon Peak,Paved,15,Clear
+1.0,Student,Afternoon Peak,Paved,24,Clear
+3.7,Regular,Midday,Paved,106,Clear
+1.0,Student,Evening,Paved,55,Clear
+1.0,Student,Morning Peak,Paved,53,Clear
+7.2,Student,Midday,Unpaved,95,Overcast
+15.4,Student,Evening,Paved,560,Clear
+1.0,Student,Evening,Paved,22,Clear
+6.6,Regular,Afternoon Peak,Paved,179,Clear
+10.6,Student,Evening,Paved,196,Clear
+1.0,Student,Midday,Paved,34,Clear
+7.2,Student,Afternoon Peak,Paved,91,Clear
+8.1,Student,Afternoon Peak,Paved,471,Overcast
+9.5,Regular,Afternoon Peak,Paved,123,Clear
+12.8,Student,Midday,Paved,345,Clear
+1.0,Student,Midday,Paved,26,Clear
+5.0,Student,Morning Peak,Paved,30,Clear
+7.5,Student,Evening,Paved,71,Clear
+13.9,Student,Evening,Paved,158,Clear
+10.2,Student,Midday,Paved,104,Clear
+3.5,Regular,Evening,Paved,74,Clear
+6.8,Student,Afternoon Peak,Unpaved,287,Clear
+7.9,Student,Evening,Paved,219,Clear
+9.6,Regular,Afternoon Peak,Paved,132,Overcast
+10.1,Student,Morning Peak,Paved,223,Clear
+6.1,Student,Midday,Paved,134,Overcast
+23.2,Student,Afternoon Peak,Paved,770,Clear
+8.7,Regular,Midday,Paved,112,Clear
+9.8,Student,Midday,Paved,187,Clear
+1.0,Regular,Afternoon Peak,Paved,37,Clear
+3.4,Student,Afternoon Peak,Paved,139,Overcast
+8.1,Regular,Midday,Paved,222,Clear
+7.6,Student,Evening,Paved,142,Clear
+11.2,Student,Morning Peak,Paved,283,Clear
+4.5,Regular,Morning Peak,Paved,72,Clear
+12.1,Student,Afternoon Peak,Paved,141,Overcast
+7.0,Student,Evening,Paved,30,Clear
+2.8,Student,Afternoon Peak,Paved,37,Clear
+1.0,Student,Afternoon Peak,Paved,53,Clear
+1.0,Student,Midday,Paved,15,Overcast
+16.0,Regular,Midday,Paved,179,Clear
+9.6,Student,Morning Peak,Paved,119,Clear
+8.3,Student,Midday,Paved,172,Clear
+1.0,Student,Morning Peak,Unpaved,26,Clear
+1.0,Student,Evening,Paved,15,Clear
+13.2,Student,Evening,Paved,341,Clear
+3.5,Student,Midday,Paved,55,Clear
+1.0,Student,Midday,Paved,51,Overcast
+3.7,Student,Midday,Paved,76,Clear
+24.0,Regular,Morning Peak,Paved,284,Clear
+4.9,Student,Midday,Paved,114,Clear
+10.7,Student,Evening,Paved,108,Overcast
+1.0,Student,Midday,Paved,27,Clear
+11.6,Regular,Midday,Paved,498,Overcast
+5.6,Regular,Morning Peak,Paved,100,Clear
+16.4,Student,Evening,Unpaved,336,Clear
+2.8,Student,Afternoon Peak,Paved,46,Clear
+2.6,Student,Morning Peak,Paved,51,Clear
+16.5,Student,Midday,Paved,251,Clear
+4.7,Student,Afternoon Peak,Paved,101,Clear
+8.1,Regular,Afternoon Peak,Paved,369,Overcast
+10.3,Student,Evening,Paved,110,Clear
+1.5,Regular,Midday,Paved,38,Clear
+8.6,Regular,Morning Peak,Paved,125,Clear
+9.6,Student,Midday,Paved,102,Clear
+12.8,Student,Evening,Paved,252,Clear
+9.9,Student,Afternoon Peak,Paved,129,Overcast
+8.1,Student,Midday,Paved,82,Clear
+8.5,Student,Midday,Paved,265,Clear
+18.0,Regular,Morning Peak,Paved,600,Overcast
+3.5,Student,Midday,Paved,57,Clear
+2.6,Student,Midday,Paved,41,Clear
+1.0,Student,Afternoon Peak,Paved,36,Clear
+4.0,Student,Afternoon Peak,Unpaved,182,Clear
+7.3,Student,Morning Peak,Paved,167,Clear
+1.1,Student,Evening,Paved,49,Clear
+8.9,Student,Morning Peak,Paved,95,Clear
+1.0,Student,Afternoon Peak,Paved,38,Clear
+2.4,Student,Afternoon Peak,Paved,68,Clear
+7.8,Regular,Evening,Paved,95,Clear
+14.4,Regular,Afternoon Peak,Paved,634,Clear
+8.3,Regular,Midday,Paved,98,Clear
+2.4,Student,Afternoon Peak,Paved,89,Clear
+4.3,Student,Morning Peak,Paved,56,Clear
+6.7,Student,Afternoon Peak,Paved,165,Clear
+24.0,Student,Afternoon Peak,Paved,744,Clear
+8.1,Regular,Morning Peak,Paved,99,Clear
+4.2,Student,Midday,Unpaved,111,Clear
+1.0,Student,Midday,Paved,36,Clear
+15.7,Student,Evening,Paved,359,Overcast
+5.2,Student,Midday,Paved,95,Clear
+1.0,Student,Evening,Paved,22,Clear
+9.4,Student,Midday,Paved,161,Clear
+11.0,Student,Evening,Paved,110,Clear
+10.6,Student,Midday,Paved,111,Clear
+9.9,Student,Afternoon Peak,Paved,185,Clear
+12.8,Student,Morning Peak,Paved,200,Clear
+17.2,Student,Midday,Paved,308,Clear
+5.7,Student,Afternoon Peak,Paved,77,Clear
