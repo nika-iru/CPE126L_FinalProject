@@ -1,16 +1,9 @@
-"""
-Generate a 500-entry dataset using the actual survey responses as baseline
-This analyzes the real survey data and generates synthetic samples that match the patterns
-"""
-
 import pandas as pd
 import numpy as np
 import random
 from collections import Counter
 
 def analyze_survey_data(survey_file):
-    """Analyze the survey data to extract patterns"""
-    print("📊 Analyzing survey data...")
 
     # Read the survey CSV
     df = pd.read_csv(survey_file)
@@ -37,11 +30,6 @@ def analyze_survey_data(survey_file):
 
     # Calculate fare per km for analysis
     df_clean['Fare_Per_Km'] = df_clean['Fare'] / df_clean['Distance']
-
-    print(f"✓ Analyzed {len(df_clean)} valid survey responses")
-    print(f"  Distance range: {df_clean['Distance'].min():.1f} - {df_clean['Distance'].max():.1f} km")
-    print(f"  Fare range: ₱{df_clean['Fare'].min():.0f} - ₱{df_clean['Fare'].max():.0f}")
-    print(f"  Average fare per km: ₱{df_clean['Fare_Per_Km'].mean():.2f}")
 
     return df_clean
 
@@ -107,7 +95,6 @@ def generate_dataset_from_survey(survey_file, n_samples=500, output_file='habal_
     survey_df = map_survey_categories(survey_df)
 
     # Extract distributions from survey
-    print("\n📈 Extracting patterns from survey data...")
 
     # Distance distribution parameters
     dist_mean = survey_df['Distance'].mean()
@@ -129,10 +116,6 @@ def generate_dataset_from_survey(survey_file, n_samples=500, output_file='habal_
     origins = survey_df['Origin'].dropna().unique().tolist()
     destinations = survey_df['Destination'].dropna().unique().tolist()
     all_barangays = list(set(origins + destinations))
-
-    print(f"✓ Found {len(all_barangays)} unique barangays in survey")
-    print(f"✓ Passenger type distribution: {passenger_dist}")
-    print(f"✓ Time of day distribution: {time_dist}")
 
     # Generate synthetic data
     print(f"\n🔧 Generating {n_samples} synthetic samples...")
@@ -249,35 +232,6 @@ def generate_dataset_from_survey(survey_file, n_samples=500, output_file='habal_
     # Save to CSV
     df_final.to_csv(output_file, index=False)
 
-    print(f"\n✅ SUCCESS!")
-    print(f"✓ Generated dataset with {len(df_final)} total records")
-    print(f"  - {len(df_survey)} actual survey responses")
-    print(f"  - {len(df_generated)} synthetic samples (survey-based)")
-    print(f"✓ Saved to: {output_file}")
-
-    # Show statistics
-    print(f"\n📊 Final Dataset Statistics:")
-    print(f"  Distance range: {df_final['Distance'].min():.1f} - {df_final['Distance'].max():.1f} km")
-    print(f"  Fare range: ₱{df_final['Fare_Charged'].min():.0f} - ₱{df_final['Fare_Charged'].max():.0f}")
-    print(f"  Average fare: ₱{df_final['Fare_Charged'].mean():.2f}")
-    print(f"  Median fare: ₱{df_final['Fare_Charged'].median():.2f}")
-
-    print(f"\n👥 Passenger Type Distribution:")
-    print(df_final['Passenger_Type'].value_counts())
-
-    print(f"\n🕐 Time of Day Distribution:")
-    print(df_final['Time_of_Day'].value_counts())
-
-    print(f"\n🛣️ Road Condition Distribution:")
-    print(df_final['Road_Condition'].value_counts())
-
-    print(f"\n🌤️ Weather Distribution:")
-    print(df_final['Weather_Condition'].value_counts())
-
-    # Show preview
-    print(f"\n📄 Dataset Preview (first 5 rows):")
-    print(df_final.head())
-
     return df_final
 
 
@@ -291,14 +245,3 @@ if __name__ == "__main__":
         n_samples=500,  # Will generate ~520 total (500 synthetic + ~20 survey responses)
         output_file='habal_habal_dataset.csv'
     )
-
-    print("\n" + "="*70)
-    print("🎉 Dataset generation complete!")
-    print("="*70)
-    print("\n📝 Next steps:")
-    print("1. Check 'habal_habal_dataset.csv' - this is your new dataset")
-    print("2. Update request.py to use this dataset:")
-    print("   self.fare_estimator = HabalHabalFareEstimator(")
-    print("       k=5, dataset_path='habal_habal_dataset.csv')")
-    print("3. Run: python menu.py")
-    print("\n✨ Your model will now be trained on real Davao City survey data!")

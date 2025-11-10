@@ -220,9 +220,6 @@ class HabalHabalFareEstimator:
             # Calculate dataset-based pricing statistics
             self._calculate_dataset_statistics(df, X, y)
 
-            print(f"✓ Model successfully trained with {len(df)} samples from CSV")
-            print(f"✓ Using KNN with k={self.k} neighbors")
-
             # Show data statistics
             print(f"\nDataset Statistics:")
             print(f"  Distance range: {df['Distance'].min():.2f} - {df['Distance'].max():.2f} km")
