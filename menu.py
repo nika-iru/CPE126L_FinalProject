@@ -1,5 +1,5 @@
 import tkinter as tk
-from request import RideRequestScreen
+from request import FareRequestScreen
 
 
 class MenuScreen:
@@ -17,16 +17,16 @@ class MenuScreen:
 
         title_label = tk.Label(
             header_frame,
-            text="🏍️ Habal-Habal",
+            text="🚌 Bus Fare Calculator",
             font=("Arial", 32, "bold"),
             bg="#1a1a1a",
-            fg="#ff6b35"
+            fg="#2196f3"
         )
         title_label.pack()
 
         subtitle_label = tk.Label(
             header_frame,
-            text="AI-Powered Fare Estimator",
+            text="LTFRB-Based AI Fare Estimator",
             font=("Arial", 13, "bold"),
             bg="#1a1a1a",
             fg="#4caf50"
@@ -35,7 +35,7 @@ class MenuScreen:
 
         location_label = tk.Label(
             header_frame,
-            text="Davao City, Philippines",
+            text="Philippines - City & Provincial Routes",
             font=("Arial", 10),
             bg="#1a1a1a",
             fg="#999999"
@@ -48,7 +48,7 @@ class MenuScreen:
 
         info_text = tk.Label(
             info_banner,
-            text="🤖 Powered by K-Nearest Neighbors (KNN)\nPromoting Fair & Transparent Fares",
+            text="🤖 Powered by K-Nearest Neighbors (KNN)\nBased on LTFRB Official Fare Matrix",
             font=("Arial", 9),
             bg="#1e3a5f",
             fg="white",
@@ -62,8 +62,8 @@ class MenuScreen:
         stats_frame.pack(fill=tk.X, pady=(0, 20))
 
         stat_items = [
-            ("📊", "800+", "Training\nSamples"),
-            ("🎯", "85%+", "Accuracy\nRate"),
+            ("📊", "1000+", "LTFRB\nRecords"),
+            ("🎯", "99%", "Accuracy\nRate"),
             ("⚡", "K=5", "Nearest\nNeighbors")
         ]
 
@@ -76,7 +76,7 @@ class MenuScreen:
                 text=emoji,
                 font=("Arial", 20),
                 bg="#2a2a2a",
-                fg="#ff6b35",
+                fg="#2196f3",
                 pady=5
             ).pack()
 
@@ -104,20 +104,20 @@ class MenuScreen:
         # Button style configuration
         button_config = {
             "font": ("Arial", 13, "bold"),
-            "bg": "#ff6b35",
+            "bg": "#2196f3",
             "fg": "white",
-            "activebackground": "#ff8555",
+            "activebackground": "#42a5f5",
             "activeforeground": "white",
             "relief": tk.FLAT,
             "cursor": "hand2",
             "height": 2
         }
 
-        # Primary button - Estimate Fare
+        # Primary button - Calculate Fare
         btn_estimate = tk.Button(
             menu_frame,
-            text="🔮  Estimate Fair Fare",
-            command=self.estimate_fare,
+            text="🔮  Calculate Bus Fare",
+            command=self.calculate_fare,
             **button_config
         )
         btn_estimate.pack(fill=tk.X, pady=8)
@@ -130,8 +130,8 @@ class MenuScreen:
 
         btn_check = tk.Button(
             menu_frame,
-            text="⚖️  Check for Overpricing",
-            command=self.check_overpricing,
+            text="⚖️  Check Fare Compliance",
+            command=self.check_compliance,
             **secondary_config
         )
         btn_check.pack(fill=tk.X, pady=5)
@@ -146,8 +146,8 @@ class MenuScreen:
 
         btn_report = tk.Button(
             menu_frame,
-            text="📝  Report Fare Data",
-            command=self.report_fare,
+            text="📝  LTFRB Standards",
+            command=self.show_standards,
             **secondary_config
         )
         btn_report.pack(fill=tk.X, pady=5)
@@ -177,13 +177,13 @@ class MenuScreen:
         )
         authors_label.pack(fill=tk.X)
 
-    def estimate_fare(self):
-        """Switch to fare estimation screen"""
-        self.app_controller.show_ride_request()
+    def calculate_fare(self):
+        """Switch to fare calculation screen"""
+        self.app_controller.show_fare_request()
 
-    def check_overpricing(self):
-        """Switch to fare estimation screen (same as estimate)"""
-        self.app_controller.show_ride_request()
+    def check_compliance(self):
+        """Switch to fare calculation screen (same as calculate)"""
+        self.app_controller.show_fare_request()
 
     def about_system(self):
         """Show about dialog"""
@@ -201,31 +201,31 @@ class MenuScreen:
 
         tk.Label(
             content_frame,
-            text="🏍️ Habal-Habal Fare Estimator",
+            text="🚌 Bus Fare Calculator",
             font=("Arial", 16, "bold"),
             bg="#1a1a1a",
-            fg="#ff6b35"
+            fg="#2196f3"
         ).pack(pady=(0, 10))
 
-        about_text = """AI-Powered Fare Estimator for Motorbikes (Habal-Habal) in Davao City
+        about_text = """AI-Powered Fare Calculator for Philippine Bus Transportation
 
-This system uses Machine Learning to promote transparency and fairness in local transportation.
+This system uses Machine Learning to verify compliance with LTFRB fare regulations.
 
 🤖 Technology:
 • K-Nearest Neighbors (KNN) Algorithm
 • Supervised Learning Model
-• 800+ Training Samples
+• 1000+ LTFRB Training Records
 • Real-time Fare Prediction
 
 📊 Features:
 • Distance-based fare calculation
-• Passenger type discounts
-• Time of day adjustments
-• Road condition factors
-• Weather surcharges
-• Overpricing detection (20% threshold)
+• Route type (City/Provincial)
+• Bus type classification (Ordinary, Aircon, Deluxe, etc.)
+• Passenger discounts (20% for Student/Senior/PWD)
+• Fare compliance checking (15% threshold)
+• LTFRB standard verification
 
-👥 Research Team:
+💥 Research Team:
 • Sharmayne Andrea Cena
 • Xavier Ignazio Maria Fuentes
 • Christina Heliane Sevilla
@@ -234,10 +234,10 @@ This system uses Machine Learning to promote transparency and fairness in local 
 Mapúa Malayan Colleges Mindanao
 College of Engineering and Architecture
 
-📍 Scope:
-Davao City habal-habal operations
-Short to medium distance trips
-Selected barangay routes"""
+📍 Coverage:
+Philippine bus operations nationwide
+City and provincial routes
+All LTFRB-regulated bus types"""
 
         text_widget = tk.Text(
             content_frame,
@@ -258,9 +258,9 @@ Selected barangay routes"""
             content_frame,
             text="Close",
             font=("Arial", 11),
-            bg="#ff6b35",
+            bg="#2196f3",
             fg="white",
-            activebackground="#ff8555",
+            activebackground="#42a5f5",
             relief=tk.FLAT,
             cursor="hand2",
             command=about_window.destroy,
@@ -268,63 +268,84 @@ Selected barangay routes"""
         )
         close_btn.pack(fill=tk.X)
 
-    def report_fare(self):
-        """Show fare reporting dialog"""
-        report_window = tk.Toplevel(self.main_frame)
-        report_window.title("Report Fare Data")
-        report_window.geometry("350x300")
-        report_window.configure(bg="#1a1a1a")
+    def show_standards(self):
+        """Show LTFRB standards dialog"""
+        standards_window = tk.Toplevel(self.main_frame)
+        standards_window.title("LTFRB Fare Standards")
+        standards_window.geometry("400x450")
+        standards_window.configure(bg="#1a1a1a")
 
-        report_window.transient(self.main_frame)
-        report_window.grab_set()
+        standards_window.transient(self.main_frame)
+        standards_window.grab_set()
 
-        content_frame = tk.Frame(report_window, bg="#1a1a1a")
+        content_frame = tk.Frame(standards_window, bg="#1a1a1a")
         content_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 
         tk.Label(
             content_frame,
-            text="📝 Report Fare Data",
+            text="📝 LTFRB Fare Matrix",
             font=("Arial", 14, "bold"),
             bg="#1a1a1a",
-            fg="#ff6b35"
+            fg="#2196f3"
         ).pack(pady=(0, 15))
 
-        info_text = """Help improve our system!
+        standards_text = """Official LTFRB Bus Fare Standards
 
-Your fare reports help train our AI model to provide more accurate predictions.
+🚌 City Routes (Aircon):
+• Base Fare: ₱15.00 (first 5km)
+• Additional: ₱2.75 per km
 
-What to report:
-• Origin and destination barangay
-• Distance traveled
-• Actual fare charged
-• Date and time of ride
-• Road and weather conditions
+🚌 City Routes (Ordinary):
+• Base Fare: ₱13.00 (first 5km)
+• Additional: ₱2.25 per km
 
-All reports are anonymous and used solely for research purposes.
+🚌 Provincial Routes:
+• Ordinary: ₱11.00 base + ₱1.90/km
+• Deluxe: 25% premium over ordinary
+• Super Deluxe: 40% premium
+• Luxury: 100% premium
 
-Contact: CTTMO Davao City
-Email: research@example.com"""
+👥 Passenger Discounts:
+• Students: 20% discount
+• Senior Citizens: 20% discount
+• PWD: 20% discount
 
-        tk.Label(
+⚖️ Compliance Standards:
+• Maximum allowed variance: ±15%
+• Required valid ID for discounts
+• Fare matrix posted inside bus
+
+📞 Report Overcharging:
+• LTFRB Hotline: 1342
+• Email: contact@ltfrb.gov.ph
+
+All fares are regulated by the Land Transportation Franchising and Regulatory Board (LTFRB)."""
+
+        text_widget = tk.Text(
             content_frame,
-            text=info_text,
             font=("Arial", 9),
-            bg="#1a1a1a",
+            bg="#2a2a2a",
             fg="#cccccc",
-            justify="left",
-            wraplength=300
-        ).pack(pady=(0, 15))
+            wrap=tk.WORD,
+            relief=tk.FLAT,
+            padx=15,
+            pady=15,
+            height=18
+        )
+        text_widget.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        text_widget.insert("1.0", standards_text)
+        text_widget.config(state=tk.DISABLED)
 
         close_btn = tk.Button(
             content_frame,
             text="Close",
             font=("Arial", 11),
-            bg="#ff6b35",
+            bg="#2196f3",
             fg="white",
-            activebackground="#ff8555",
+            activebackground="#42a5f5",
             relief=tk.FLAT,
             cursor="hand2",
-            command=report_window.destroy,
+            command=standards_window.destroy,
             pady=8
         )
         close_btn.pack(fill=tk.X, side=tk.BOTTOM)
@@ -335,10 +356,10 @@ Email: research@example.com"""
 
 
 # ==================== APP CONTROLLER ====================
-class MotoRideApp:
+class BusFareApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Habal-Habal Fare Estimator - Davao City")
+        self.root.title("LTFRB Bus Fare Calculator - Philippines")
         self.root.geometry("450x750")
         self.root.configure(bg="#1a1a1a")
 
@@ -357,14 +378,14 @@ class MotoRideApp:
             self.current_screen.destroy()
         self.current_screen = MenuScreen(self.container, self)
 
-    def show_ride_request(self):
-        """Display the ride request screen"""
+    def show_fare_request(self):
+        """Display the fare request screen"""
         if self.current_screen:
             self.current_screen.destroy()
-        self.current_screen = RideRequestScreen(self.container, self)
+        self.current_screen = FareRequestScreen(self.container, self)
 
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = MotoRideApp(root)
+    app = BusFareApp(root)
     root.mainloop()

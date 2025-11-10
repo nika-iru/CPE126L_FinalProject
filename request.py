@@ -1,48 +1,45 @@
 import tkinter as tk
 from tkinter import ttk
-from fare_estimator import HabalHabalFareEstimator
+from fare_estimator import BusFareEstimator
 
 
-class RideRequestScreen:
+class FareRequestScreen:
     def __init__(self, parent_frame, app_controller):
         self.parent_frame = parent_frame
         self.app_controller = app_controller
 
-        # Initialize AI Fare Estimator
-        # Automatically loads 'habal_habal_dataset.csv' if available
-        # Otherwise falls back to synthetic data
-        self.fare_estimator = HabalHabalFareEstimator(k=5)
+        # Initialize AI Fare Estimator with LTFRB data
+        try:
+            self.fare_estimator = BusFareEstimator(k=5, dataset_path='bus_fare_ltfrb_data.csv')
+        except Exception as e:
+            print(f"Error loading fare estimator: {e}")
+            self.fare_estimator = None
 
         # Variables
         self.distance = tk.StringVar(value="")
-        self.hour = tk.StringVar(value="12")
-        self.minute = tk.StringVar(value="00")
-        self.am_pm = tk.StringVar(value="PM")
+        self.route_type = tk.StringVar(value="City")
+        self.bus_type = tk.StringVar(value="Ordinary")
         self.passenger_type = tk.StringVar(value="Regular")
-        self.road_condition = tk.StringVar(value="Paved")
-        self.weather = tk.StringVar(value="Clear")
         self.actual_fare = tk.StringVar(value="")
 
-        self.eta = "-- min"
         self.predicted_fare = "₱--.--"
-        self.fare_status = ""
 
         # Main container with scrollbar
-        canvas = tk.Canvas(parent_frame, bg="#1a1a1a", highlightthickness=0)
-        scrollbar = tk.Scrollbar(parent_frame, orient="vertical", command=canvas.yview)
+        self.canvas = tk.Canvas(parent_frame, bg="#1a1a1a", highlightthickness=0)
+        self.scrollbar = tk.Scrollbar(parent_frame, orient="vertical", command=self.canvas.yview)
 
-        self.main_frame = tk.Frame(canvas, bg="#1a1a1a")
+        self.main_frame = tk.Frame(self.canvas, bg="#1a1a1a")
 
         self.main_frame.bind(
             "<Configure>",
-            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+            lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
         )
 
-        canvas.create_window((0, 0), window=self.main_frame, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
+        self.canvas.create_window((0, 0), window=self.main_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
 
-        canvas.pack(side="left", fill="both", expand=True)
-        scrollbar.pack(side="right", fill="y")
+        self.canvas.pack(side="left", fill="both", expand=True)
+        self.scrollbar.pack(side="right", fill="y")
 
         # Header with back button
         header_frame = tk.Frame(self.main_frame, bg="#2a2a2a")
@@ -64,7 +61,7 @@ class RideRequestScreen:
 
         header_title = tk.Label(
             header_frame,
-            text="AI Fare Estimator",
+            text="LTFRB Fare Calculator",
             font=("Arial", 14, "bold"),
             bg="#2a2a2a",
             fg="white",
@@ -78,7 +75,7 @@ class RideRequestScreen:
 
         info_label = tk.Label(
             info_frame,
-            text="🤖 Powered by K-Nearest Neighbors (KNN) Algorithm\nPromoting Fair & Transparent Habal-Habal Fares in Davao City",
+            text="🤖 Powered by K-Nearest Neighbors (KNN) Algorithm\nBased on Official LTFRB Fare Matrix Standards",
             font=("Arial", 9),
             bg="#1e3a5f",
             fg="white",
@@ -92,7 +89,7 @@ class RideRequestScreen:
         input_frame.pack(fill=tk.X, padx=20, pady=5)
 
         # Distance input
-        self._create_label(input_frame, "📍 Distance (km)")
+        self._create_label(input_frame, "📏 Distance (km)")
         distance_entry = tk.Entry(
             input_frame,
             textvariable=self.distance,
@@ -103,99 +100,68 @@ class RideRequestScreen:
             insertbackground="white"
         )
         distance_entry.pack(fill=tk.X, ipady=8, pady=(0, 15))
-        distance_entry.bind('<KeyRelease>', self.update_prediction)
 
-        # Time of day input (12-hour format with AM/PM)
-        self._create_label(input_frame, "🕐 Time of Ride")
+        # Route Type selector
+        self._create_label(input_frame, "🛣️ Route Type")
+        route_frame = tk.Frame(input_frame, bg="#1a1a1a")
+        route_frame.pack(fill=tk.X, pady=(0, 15))
 
-        time_container = tk.Frame(input_frame, bg="#1a1a1a")
-        time_container.pack(fill=tk.X, pady=(0, 15))
+        route_options = ['City', 'Provincial']
+        for option in route_options:
+            btn = tk.Button(
+                route_frame,
+                text=option,
+                command=lambda o=option: self.select_route_type(o),
+                font=("Arial", 10),
+                bg="#2a2a2a",
+                fg="white",
+                activebackground="#3a3a3a",
+                relief=tk.FLAT,
+                cursor="hand2"
+            )
+            btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
+            if option == 'City':
+                btn.config(bg="#2196f3", activebackground="#42a5f5")
+                self.selected_route_btn = btn
 
-        # Hour dropdown
-        hour_frame = tk.Frame(time_container, bg="#2a2a2a")
-        hour_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
+        # Bus Type selector
+        self._create_label(input_frame, "🚌 Bus Type")
+        bus_frame = tk.Frame(input_frame, bg="#1a1a1a")
+        bus_frame.pack(fill=tk.X, pady=(0, 15))
 
-        tk.Label(
-            hour_frame,
-            text="Hour",
-            font=("Arial", 8),
-            bg="#2a2a2a",
-            fg="#999999"
-        ).pack()
+        bus_options = ['Ordinary', 'Aircon', 'Deluxe', 'Super Deluxe', 'Luxury']
+        self.bus_buttons = []
+        for i, option in enumerate(bus_options):
+            if i % 3 == 0:
+                row_frame = tk.Frame(bus_frame, bg="#1a1a1a")
+                row_frame.pack(fill=tk.X, pady=2)
 
-        hour_dropdown = ttk.Combobox(
-            hour_frame,
-            textvariable=self.hour,
-            values=[f"{i:02d}" for i in range(1, 13)],
-            state="readonly",
-            font=("Arial", 12),
-            width=5
-        )
-        hour_dropdown.pack(ipady=5)
-        hour_dropdown.bind('<<ComboboxSelected>>', self.update_prediction)
+            btn = tk.Button(
+                row_frame,
+                text=option,
+                command=lambda o=option: self.select_bus_type(o),
+                font=("Arial", 9),
+                bg="#2a2a2a",
+                fg="white",
+                activebackground="#3a3a3a",
+                relief=tk.FLAT,
+                cursor="hand2",
+                width=10
+            )
+            btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
+            self.bus_buttons.append(btn)
 
-        # Minute dropdown
-        minute_frame = tk.Frame(time_container, bg="#2a2a2a")
-        minute_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=(0, 5))
-
-        tk.Label(
-            minute_frame,
-            text="Minute",
-            font=("Arial", 8),
-            bg="#2a2a2a",
-            fg="#999999"
-        ).pack()
-
-        minute_dropdown = ttk.Combobox(
-            minute_frame,
-            textvariable=self.minute,
-            values=["00", "15", "30", "45"],
-            state="readonly",
-            font=("Arial", 12),
-            width=5
-        )
-        minute_dropdown.pack(ipady=5)
-        minute_dropdown.bind('<<ComboboxSelected>>', self.update_prediction)
-
-        # AM/PM buttons
-        ampm_frame = tk.Frame(time_container, bg="#1a1a1a")
-        ampm_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-        self.am_btn = tk.Button(
-            ampm_frame,
-            text="AM",
-            command=lambda: self.select_am_pm("AM"),
-            font=("Arial", 11, "bold"),
-            bg="#2a2a2a",
-            fg="white",
-            activebackground="#3a3a3a",
-            relief=tk.FLAT,
-            cursor="hand2",
-            width=5
-        )
-        self.am_btn.pack(fill=tk.X, pady=(0, 3))
-
-        self.pm_btn = tk.Button(
-            ampm_frame,
-            text="PM",
-            command=lambda: self.select_am_pm("PM"),
-            font=("Arial", 11, "bold"),
-            bg="#ff6b35",
-            fg="white",
-            activebackground="#ff8555",
-            relief=tk.FLAT,
-            cursor="hand2",
-            width=5
-        )
-        self.pm_btn.pack(fill=tk.X)
+            if option == 'Ordinary':
+                btn.config(bg="#2196f3", activebackground="#42a5f5")
+                self.selected_bus_btn = btn
 
         # Passenger Type selector
         self._create_label(input_frame, "👤 Passenger Type")
         passenger_frame = tk.Frame(input_frame, bg="#1a1a1a")
         passenger_frame.pack(fill=tk.X, pady=(0, 15))
 
-        passenger_options = ['Regular', 'Student', 'Senior', 'PWD']
-        for i, option in enumerate(passenger_options):
+        passenger_options = ['Regular', 'Student', 'Elderly', 'PWD']
+        for option in passenger_options:
             btn = tk.Button(
                 passenger_frame,
                 text=option,
@@ -210,69 +176,23 @@ class RideRequestScreen:
             )
             btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
             if option == 'Regular':
-                btn.config(bg="#ff6b35", activebackground="#ff8555")
+                btn.config(bg="#2196f3", activebackground="#42a5f5")
                 self.selected_passenger_btn = btn
 
-        # Road Condition selector
-        self._create_label(input_frame, "🛣️ Road Condition")
-        road_frame = tk.Frame(input_frame, bg="#1a1a1a")
-        road_frame.pack(fill=tk.X, pady=(0, 15))
-
-        road_options = ['Paved', 'Unpaved', 'Difficult']
-        for i, option in enumerate(road_options):
-            btn = tk.Button(
-                road_frame,
-                text=option,
-                command=lambda o=option: self.select_road_condition(o),
-                font=("Arial", 10),
-                bg="#2a2a2a",
-                fg="white",
-                activebackground="#3a3a3a",
-                relief=tk.FLAT,
-                cursor="hand2"
-            )
-            btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
-            if option == 'Paved':
-                btn.config(bg="#ff6b35", activebackground="#ff8555")
-                self.selected_road_btn = btn
-
-        # Weather selector
-        self._create_label(input_frame, "🌤️ Weather Condition")
-        weather_frame = tk.Frame(input_frame, bg="#1a1a1a")
-        weather_frame.pack(fill=tk.X, pady=(0, 15))
-
-        weather_options = [('Clear', '☀️'), ('Overcast', '☁️'), ('Rainy', '🌧️')]
-        for option, emoji in weather_options:
-            btn = tk.Button(
-                weather_frame,
-                text=f"{emoji} {option}",
-                command=lambda o=option: self.select_weather(o),
-                font=("Arial", 10),
-                bg="#2a2a2a",
-                fg="white",
-                activebackground="#3a3a3a",
-                relief=tk.FLAT,
-                cursor="hand2"
-            )
-            btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
-            if option == 'Clear':
-                btn.config(bg="#ff6b35", activebackground="#ff8555")
-                self.selected_weather_btn = btn
-
-        # Predict button
-        predict_btn = tk.Button(
+        # Calculate button
+        calculate_btn = tk.Button(
             input_frame,
-            text="🔮 Predict Fair Fare",
+            text="🔮 Calculate Fare",
             font=("Arial", 12, "bold"),
             bg="#4caf50",
             fg="white",
             activebackground="#5cbf60",
             relief=tk.FLAT,
             cursor="hand2",
-            command=self.predict_fare,
+            command=self.calculate_fare,
             pady=12
         )
-        predict_btn.pack(fill=tk.X, pady=(10, 15))
+        calculate_btn.pack(fill=tk.X, pady=(10, 15))
 
         # AI Prediction Results
         self.results_frame = tk.Frame(self.main_frame, bg="#2a2a2a")
@@ -280,10 +200,10 @@ class RideRequestScreen:
 
         results_title = tk.Label(
             self.results_frame,
-            text="AI Prediction Results",
+            text="LTFRB-Based Fare Calculation",
             font=("Arial", 12, "bold"),
             bg="#2a2a2a",
-            fg="#ff6b35"
+            fg="#2196f3"
         )
         results_title.pack(pady=(10, 5))
 
@@ -299,7 +219,7 @@ class RideRequestScreen:
 
         self.confidence_label = tk.Label(
             self.results_frame,
-            text="Enter ride details to predict",
+            text="Enter trip details to calculate",
             font=("Arial", 9),
             bg="#2a2a2a",
             fg="#999999"
@@ -310,16 +230,16 @@ class RideRequestScreen:
         self.breakdown_frame = tk.Frame(self.results_frame, bg="#2a2a2a")
         self.breakdown_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
 
-        # Overpricing Check Section
+        # Compliance Check Section
         check_frame = tk.Frame(self.main_frame, bg="#1a1a1a")
         check_frame.pack(fill=tk.X, padx=20, pady=(0, 15))
 
         check_title = tk.Label(
             check_frame,
-            text="⚖️ Check for Overpricing",
+            text="⚖️ Check Fare Compliance",
             font=("Arial", 12, "bold"),
             bg="#1a1a1a",
-            fg="#ff6b35"
+            fg="#2196f3"
         )
         check_title.pack(pady=(0, 10))
 
@@ -346,38 +266,21 @@ class RideRequestScreen:
 
         check_btn = tk.Button(
             check_frame,
-            text="🔍 Check Fare",
+            text="🔍 Check Compliance",
             font=("Arial", 11, "bold"),
-            bg="#2196f3",
+            bg="#ff9800",
             fg="white",
-            activebackground="#42a5f5",
+            activebackground="#ffa726",
             relief=tk.FLAT,
             cursor="hand2",
-            command=self.check_overpricing,
+            command=self.check_compliance,
             pady=10
         )
         check_btn.pack(fill=tk.X)
 
-        # Overpricing result
-        self.overpricing_result = tk.Frame(check_frame, bg="#1a1a1a")
-        self.overpricing_result.pack(fill=tk.X, pady=(10, 0))
-
-    @property
-    def time_of_day(self):
-        """Convert 12-hour format to 24-hour HH:MM string"""
-        hour = int(self.hour.get())
-        minute = self.minute.get()
-        period = self.am_pm.get()
-
-        # Convert to 24-hour format
-        if period == "AM":
-            if hour == 12:
-                hour = 0
-        else:  # PM
-            if hour != 12:
-                hour += 12
-
-        return f"{hour:02d}:{minute}"
+        # Compliance result
+        self.compliance_result = tk.Frame(check_frame, bg="#1a1a1a")
+        self.compliance_result.pack(fill=tk.X, pady=(10, 0))
 
     def _create_label(self, parent, text):
         """Helper to create consistent labels"""
@@ -391,19 +294,33 @@ class RideRequestScreen:
         )
         label.pack(fill=tk.X, pady=(0, 5))
 
-    def select_am_pm(self, period):
-        """Update AM/PM selection"""
-        self.am_pm.set(period)
+    def select_route_type(self, route):
+        """Update route type selection"""
+        self.route_type.set(route)
 
-        # Update button styles
-        if period == "AM":
-            self.am_btn.config(bg="#ff6b35", activebackground="#ff8555")
-            self.pm_btn.config(bg="#2a2a2a", activebackground="#3a3a3a")
-        else:
-            self.am_btn.config(bg="#2a2a2a", activebackground="#3a3a3a")
-            self.pm_btn.config(bg="#ff6b35", activebackground="#ff8555")
+        # Reset button styles
+        for widget in self.selected_route_btn.master.winfo_children():
+            widget.config(bg="#2a2a2a", activebackground="#3a3a3a")
 
-        self.update_prediction()
+        # Highlight selected
+        for widget in self.selected_route_btn.master.winfo_children():
+            if widget['text'] == route:
+                widget.config(bg="#2196f3", activebackground="#42a5f5")
+                self.selected_route_btn = widget
+
+    def select_bus_type(self, bus):
+        """Update bus type selection"""
+        self.bus_type.set(bus)
+
+        # Reset all bus button styles
+        for btn in self.bus_buttons:
+            btn.config(bg="#2a2a2a", activebackground="#3a3a3a")
+
+        # Highlight selected
+        for btn in self.bus_buttons:
+            if btn['text'] == bus:
+                btn.config(bg="#2196f3", activebackground="#42a5f5")
+                self.selected_bus_btn = btn
 
     def select_passenger_type(self, ptype):
         """Update passenger type selection"""
@@ -416,50 +333,15 @@ class RideRequestScreen:
         # Highlight selected
         for widget in self.selected_passenger_btn.master.winfo_children():
             if widget['text'] == ptype:
-                widget.config(bg="#ff6b35", activebackground="#ff8555")
+                widget.config(bg="#2196f3", activebackground="#42a5f5")
                 self.selected_passenger_btn = widget
 
-        self.update_prediction()
+    def calculate_fare(self):
+        """Calculate fare using LTFRB-based AI model"""
+        if not self.fare_estimator:
+            self.show_error("Fare estimator not initialized. Please check bus_fare_ltfrb_data.csv")
+            return
 
-    def select_road_condition(self, condition):
-        """Update road condition selection"""
-        self.road_condition.set(condition)
-
-        # Reset button styles
-        for widget in self.selected_road_btn.master.winfo_children():
-            widget.config(bg="#2a2a2a", activebackground="#3a3a3a")
-
-        # Highlight selected
-        for widget in self.selected_road_btn.master.winfo_children():
-            if widget['text'] == condition:
-                widget.config(bg="#ff6b35", activebackground="#ff8555")
-                self.selected_road_btn = widget
-
-        self.update_prediction()
-
-    def select_weather(self, weather):
-        """Update weather selection"""
-        self.weather.set(weather)
-
-        # Reset button styles
-        for widget in self.selected_weather_btn.master.winfo_children():
-            widget.config(bg="#2a2a2a", activebackground="#3a3a3a")
-
-        # Highlight selected
-        for widget in self.selected_weather_btn.master.winfo_children():
-            if weather in widget['text']:
-                widget.config(bg="#ff6b35", activebackground="#ff8555")
-                self.selected_weather_btn = widget
-
-        self.update_prediction()
-
-    def update_prediction(self, event=None):
-        """Auto-update prediction as user types"""
-        # Just clear the display, user must click predict button
-        pass
-
-    def predict_fare(self):
-        """Predict fare using AI model"""
         try:
             distance = float(self.distance.get()) if self.distance.get() else 0
 
@@ -470,19 +352,17 @@ class RideRequestScreen:
             # Get prediction from AI model
             prediction = self.fare_estimator.predict_fare(
                 distance=distance,
-                passenger_type=self.passenger_type.get(),
-                time_of_day=self.time_of_day,
-                road_condition=self.road_condition.get(),
-                weather=self.weather.get()
+                route_type=self.route_type.get(),
+                bus_type=self.bus_type.get(),
+                passenger_type=self.passenger_type.get()
             )
 
             # Get fare breakdown
             breakdown = self.fare_estimator.get_fare_breakdown(
                 distance=distance,
-                passenger_type=self.passenger_type.get(),
-                time_of_day=self.time_of_day,
-                road_condition=self.road_condition.get(),
-                weather=self.weather.get()
+                route_type=self.route_type.get(),
+                bus_type=self.bus_type.get(),
+                passenger_type=self.passenger_type.get()
             )
 
             # Update display
@@ -498,6 +378,8 @@ class RideRequestScreen:
                 widget.destroy()
 
             breakdown_items = [
+                ("Route Type", breakdown['route_type']),
+                ("Bus Type", breakdown['bus_type']),
                 ("Base Fare", f"₱{breakdown['base_fare']:.2f}"),
                 ("Distance Charge", f"₱{breakdown['distance_charge']:.2f}"),
             ]
@@ -505,9 +387,8 @@ class RideRequestScreen:
             if breakdown['passenger_discount'] > 0:
                 breakdown_items.append(("Passenger Discount", f"-{breakdown['passenger_discount']}%"))
 
-            breakdown_items.append(("Time Surcharge", f"+{breakdown['time_surcharge']}%"))
-            breakdown_items.append(("Road Surcharge", f"+{breakdown['road_surcharge']}%"))
-            breakdown_items.append(("Weather Surcharge", f"+{breakdown['weather_surcharge']}%"))
+            if breakdown['bus_premium'] > 0:
+                breakdown_items.append(("Bus Premium", f"+{breakdown['bus_premium']}%"))
 
             for label, value in breakdown_items:
                 item_frame = tk.Frame(self.breakdown_frame, bg="#2a2a2a")
@@ -527,7 +408,7 @@ class RideRequestScreen:
                     text=value,
                     font=("Arial", 9, "bold"),
                     bg="#2a2a2a",
-                    fg="#ff6b35",
+                    fg="#2196f3",
                     anchor="e"
                 ).pack(side=tk.RIGHT)
 
@@ -536,11 +417,15 @@ class RideRequestScreen:
         except Exception as e:
             self.show_error(f"Error: {str(e)}")
 
-    def check_overpricing(self):
-        """Check if actual fare is overpriced"""
+    def check_compliance(self):
+        """Check if actual fare complies with LTFRB standards"""
+        if not self.fare_estimator:
+            self.show_error("Fare estimator not initialized")
+            return
+
         try:
             if not self.predicted_fare_label.cget("text").startswith("₱"):
-                self.show_error("Please predict fare first")
+                self.show_error("Please calculate fare first")
                 return
 
             predicted = float(self.predicted_fare_label.cget("text").replace("₱", ""))
@@ -549,11 +434,11 @@ class RideRequestScreen:
             result = self.fare_estimator.check_overpricing(predicted, actual)
 
             # Clear previous result
-            for widget in self.overpricing_result.winfo_children():
+            for widget in self.compliance_result.winfo_children():
                 widget.destroy()
 
             # Show result
-            result_frame = tk.Frame(self.overpricing_result, bg="#2a2a2a", padx=15, pady=15)
+            result_frame = tk.Frame(self.compliance_result, bg="#2a2a2a", padx=15, pady=15)
             result_frame.pack(fill=tk.X, pady=(10, 0))
 
             status_colors = {
@@ -584,12 +469,22 @@ class RideRequestScreen:
             if result['is_overpriced']:
                 warning = tk.Label(
                     result_frame,
-                    text=f"⚠️ Exceeds fair fare by more than {result['threshold_percentage']:.0f}%",
+                    text=f"⚠️ Exceeds LTFRB standard by more than {result['threshold_percentage']:.0f}%\nYou may report to LTFRB Hotline: 1342",
                     font=("Arial", 9),
                     bg="#2a2a2a",
-                    fg="#ff5252"
+                    fg="#ff5252",
+                    justify="center"
                 )
                 warning.pack(pady=5)
+            else:
+                ok_label = tk.Label(
+                    result_frame,
+                    text="✓ Fare is within LTFRB acceptable range",
+                    font=("Arial", 9),
+                    bg="#2a2a2a",
+                    fg="#4caf50"
+                )
+                ok_label.pack(pady=5)
 
         except ValueError:
             self.show_error("Please enter valid fare amounts")
@@ -615,4 +510,5 @@ class RideRequestScreen:
 
     def destroy(self):
         """Clean up the screen"""
-        self.main_frame.master.master.destroy()
+        self.canvas.destroy()
+        self.scrollbar.destroy()

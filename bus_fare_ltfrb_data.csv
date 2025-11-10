@@ -1,0 +1,1201 @@
+route_type,bus_type,distance_km,passenger_type,fare_php
+City,Aircon,1,Regular,15
+City,Aircon,1,Student/Elderly/PWD,12
+City,Aircon,2,Regular,15
+City,Aircon,2,Student/Elderly/PWD,12
+City,Aircon,3,Regular,15
+City,Aircon,3,Student/Elderly/PWD,12
+City,Aircon,4,Regular,15
+City,Aircon,4,Student/Elderly/PWD,12
+City,Aircon,5,Regular,15
+City,Aircon,5,Student/Elderly/PWD,12
+City,Aircon,6,Regular,17.75
+City,Aircon,6,Student/Elderly/PWD,14
+City,Aircon,7,Regular,20.25
+City,Aircon,7,Student/Elderly/PWD,16.25
+City,Aircon,8,Regular,23
+City,Aircon,8,Student/Elderly/PWD,18.25
+City,Aircon,9,Regular,25.5
+City,Aircon,9,Student/Elderly/PWD,20.5
+City,Aircon,10,Regular,28.25
+City,Aircon,10,Student/Elderly/PWD,22.5
+City,Aircon,11,Regular,31
+City,Aircon,11,Student/Elderly/PWD,24.75
+City,Aircon,12,Regular,33.5
+City,Aircon,12,Student/Elderly/PWD,26.75
+City,Aircon,13,Regular,36.25
+City,Aircon,13,Student/Elderly/PWD,29
+City,Aircon,14,Regular,38.75
+City,Aircon,14,Student/Elderly/PWD,31
+City,Aircon,15,Regular,41.5
+City,Aircon,15,Student/Elderly/PWD,33.25
+City,Aircon,16,Regular,44.25
+City,Aircon,16,Student/Elderly/PWD,35.25
+City,Aircon,17,Regular,46.75
+City,Aircon,17,Student/Elderly/PWD,37.5
+City,Aircon,18,Regular,49.5
+City,Aircon,18,Student/Elderly/PWD,39.5
+City,Aircon,19,Regular,52
+City,Aircon,19,Student/Elderly/PWD,41.75
+City,Aircon,20,Regular,54.75
+City,Aircon,20,Student/Elderly/PWD,43.75
+City,Aircon,21,Regular,57.5
+City,Aircon,21,Student/Elderly/PWD,46
+City,Aircon,22,Regular,60
+City,Aircon,22,Student/Elderly/PWD,48
+City,Aircon,23,Regular,62.75
+City,Aircon,23,Student/Elderly/PWD,50.25
+City,Aircon,24,Regular,65.25
+City,Aircon,24,Student/Elderly/PWD,52.25
+City,Aircon,25,Regular,68
+City,Aircon,25,Student/Elderly/PWD,54.5
+City,Aircon,26,Regular,70.75
+City,Aircon,26,Student/Elderly/PWD,56.5
+City,Aircon,27,Regular,73.25
+City,Aircon,27,Student/Elderly/PWD,58.75
+City,Aircon,28,Regular,76
+City,Aircon,28,Student/Elderly/PWD,60.75
+City,Aircon,29,Regular,78.5
+City,Aircon,29,Student/Elderly/PWD,63
+City,Aircon,30,Regular,81.25
+City,Aircon,30,Student/Elderly/PWD,65
+City,Aircon,31,Regular,84
+City,Aircon,31,Student/Elderly/PWD,67
+City,Aircon,32,Regular,86.5
+City,Aircon,32,Student/Elderly/PWD,69.25
+City,Aircon,33,Regular,89.25
+City,Aircon,33,Student/Elderly/PWD,71.25
+City,Aircon,34,Regular,91.75
+City,Aircon,34,Student/Elderly/PWD,73.5
+City,Aircon,35,Regular,94.5
+City,Aircon,35,Student/Elderly/PWD,75.5
+City,Aircon,36,Regular,97.25
+City,Aircon,36,Student/Elderly/PWD,77.75
+City,Aircon,37,Regular,99.75
+City,Aircon,37,Student/Elderly/PWD,79.75
+City,Aircon,38,Regular,102.5
+City,Aircon,38,Student/Elderly/PWD,82
+City,Aircon,39,Regular,105
+City,Aircon,39,Student/Elderly/PWD,84
+City,Aircon,40,Regular,107.75
+City,Aircon,40,Student/Elderly/PWD,86.25
+City,Aircon,41,Regular,110.5
+City,Aircon,41,Student/Elderly/PWD,88.25
+City,Aircon,42,Regular,113
+City,Aircon,42,Student/Elderly/PWD,90.5
+City,Aircon,43,Regular,115.75
+City,Aircon,43,Student/Elderly/PWD,92.5
+City,Aircon,44,Regular,118.25
+City,Aircon,44,Student/Elderly/PWD,94.75
+City,Aircon,45,Regular,121
+City,Aircon,45,Student/Elderly/PWD,96.75
+City,Aircon,46,Regular,123.75
+City,Aircon,46,Student/Elderly/PWD,99
+City,Aircon,47,Regular,126.25
+City,Aircon,47,Student/Elderly/PWD,101
+City,Aircon,48,Regular,129
+City,Aircon,48,Student/Elderly/PWD,103.25
+City,Aircon,49,Regular,131.5
+City,Aircon,49,Student/Elderly/PWD,105.25
+City,Aircon,50,Regular,134.25
+City,Aircon,50,Student/Elderly/PWD,107.5
+City,Aircon,51,Regular,137
+City,Aircon,51,Student/Elderly/PWD,109.5
+City,Aircon,52,Regular,139.5
+City,Aircon,52,Student/Elderly/PWD,111.75
+City,Aircon,53,Regular,142.25
+City,Aircon,53,Student/Elderly/PWD,113.75
+City,Aircon,54,Regular,144.75
+City,Aircon,54,Student/Elderly/PWD,116
+City,Aircon,55,Regular,147.5
+City,Aircon,55,Student/Elderly/PWD,118
+City,Aircon,56,Regular,150.25
+City,Aircon,56,Student/Elderly/PWD,120
+City,Aircon,57,Regular,152.75
+City,Aircon,57,Student/Elderly/PWD,122.25
+City,Aircon,58,Regular,155.5
+City,Aircon,58,Student/Elderly/PWD,124.25
+City,Aircon,59,Regular,158
+City,Aircon,59,Student/Elderly/PWD,126.5
+City,Aircon,60,Regular,160.75
+City,Aircon,60,Student/Elderly/PWD,128.5
+City,Ordinary,1,Regular,13
+City,Ordinary,1,Student/Elderly/PWD,10.5
+City,Ordinary,2,Regular,13
+City,Ordinary,2,Student/Elderly/PWD,10.5
+City,Ordinary,3,Regular,13
+City,Ordinary,3,Student/Elderly/PWD,10.5
+City,Ordinary,4,Regular,13
+City,Ordinary,4,Student/Elderly/PWD,10.5
+City,Ordinary,5,Regular,13
+City,Ordinary,5,Student/Elderly/PWD,10.5
+City,Ordinary,6,Regular,15.25
+City,Ordinary,6,Student/Elderly/PWD,12.25
+City,Ordinary,7,Regular,17.5
+City,Ordinary,7,Student/Elderly/PWD,14
+City,Ordinary,8,Regular,19.75
+City,Ordinary,8,Student/Elderly/PWD,16
+City,Ordinary,9,Regular,22
+City,Ordinary,9,Student/Elderly/PWD,17.75
+City,Ordinary,10,Regular,24.25
+City,Ordinary,10,Student/Elderly/PWD,19.5
+City,Ordinary,11,Regular,26.5
+City,Ordinary,11,Student/Elderly/PWD,21.25
+City,Ordinary,12,Regular,28.75
+City,Ordinary,12,Student/Elderly/PWD,23
+City,Ordinary,13,Regular,31
+City,Ordinary,13,Student/Elderly/PWD,25
+City,Ordinary,14,Regular,33.25
+City,Ordinary,14,Student/Elderly/PWD,26.75
+City,Ordinary,15,Regular,35.5
+City,Ordinary,15,Student/Elderly/PWD,28.5
+City,Ordinary,16,Regular,37.75
+City,Ordinary,16,Student/Elderly/PWD,30.25
+City,Ordinary,17,Regular,40
+City,Ordinary,17,Student/Elderly/PWD,32
+City,Ordinary,18,Regular,42.25
+City,Ordinary,18,Student/Elderly/PWD,34
+City,Ordinary,19,Regular,44.5
+City,Ordinary,19,Student/Elderly/PWD,35.75
+City,Ordinary,20,Regular,46.75
+City,Ordinary,20,Student/Elderly/PWD,37.5
+City,Ordinary,21,Regular,49
+City,Ordinary,21,Student/Elderly/PWD,39.25
+City,Ordinary,22,Regular,51.25
+City,Ordinary,22,Student/Elderly/PWD,41
+City,Ordinary,23,Regular,53.5
+City,Ordinary,23,Student/Elderly/PWD,43
+City,Ordinary,24,Regular,55.75
+City,Ordinary,24,Student/Elderly/PWD,44.75
+City,Ordinary,25,Regular,58
+City,Ordinary,25,Student/Elderly/PWD,46.5
+City,Ordinary,26,Regular,60.25
+City,Ordinary,26,Student/Elderly/PWD,48.25
+City,Ordinary,27,Regular,62.5
+City,Ordinary,27,Student/Elderly/PWD,50
+City,Ordinary,28,Regular,64.75
+City,Ordinary,28,Student/Elderly/PWD,52
+City,Ordinary,29,Regular,67
+City,Ordinary,29,Student/Elderly/PWD,53.75
+City,Ordinary,30,Regular,69.25
+City,Ordinary,30,Student/Elderly/PWD,55.5
+City,Ordinary,31,Regular,71.5
+City,Ordinary,31,Student/Elderly/PWD,57.25
+City,Ordinary,32,Regular,73.75
+City,Ordinary,32,Student/Elderly/PWD,59
+City,Ordinary,33,Regular,76
+City,Ordinary,33,Student/Elderly/PWD,61
+City,Ordinary,34,Regular,78.25
+City,Ordinary,34,Student/Elderly/PWD,62.75
+City,Ordinary,35,Regular,80.5
+City,Ordinary,35,Student/Elderly/PWD,64.5
+City,Ordinary,36,Regular,82.75
+City,Ordinary,36,Student/Elderly/PWD,66.25
+City,Ordinary,37,Regular,85
+City,Ordinary,37,Student/Elderly/PWD,68
+City,Ordinary,38,Regular,87.25
+City,Ordinary,38,Student/Elderly/PWD,70
+City,Ordinary,39,Regular,89.5
+City,Ordinary,39,Student/Elderly/PWD,71.75
+City,Ordinary,40,Regular,91.75
+City,Ordinary,40,Student/Elderly/PWD,73.5
+City,Ordinary,41,Regular,94
+City,Ordinary,41,Student/Elderly/PWD,75.25
+City,Ordinary,42,Regular,96.25
+City,Ordinary,42,Student/Elderly/PWD,77
+City,Ordinary,43,Regular,98.5
+City,Ordinary,43,Student/Elderly/PWD,79
+City,Ordinary,44,Regular,100.75
+City,Ordinary,44,Student/Elderly/PWD,80.75
+City,Ordinary,45,Regular,103
+City,Ordinary,45,Student/Elderly/PWD,82.5
+City,Ordinary,46,Regular,105.25
+City,Ordinary,46,Student/Elderly/PWD,84.25
+City,Ordinary,47,Regular,107.5
+City,Ordinary,47,Student/Elderly/PWD,86
+City,Ordinary,48,Regular,109.75
+City,Ordinary,48,Student/Elderly/PWD,88
+City,Ordinary,49,Regular,112
+City,Ordinary,49,Student/Elderly/PWD,89.75
+City,Ordinary,50,Regular,114.25
+City,Ordinary,50,Student/Elderly/PWD,91.5
+City,Ordinary,51,Regular,116.5
+City,Ordinary,51,Student/Elderly/PWD,93.25
+City,Ordinary,52,Regular,118.75
+City,Ordinary,52,Student/Elderly/PWD,95
+City,Ordinary,53,Regular,121
+City,Ordinary,53,Student/Elderly/PWD,97
+City,Ordinary,54,Regular,123.25
+City,Ordinary,54,Student/Elderly/PWD,98.75
+City,Ordinary,55,Regular,125.5
+City,Ordinary,55,Student/Elderly/PWD,100.5
+City,Ordinary,56,Regular,127.75
+City,Ordinary,56,Student/Elderly/PWD,102.25
+City,Ordinary,57,Regular,130
+City,Ordinary,57,Student/Elderly/PWD,104
+City,Ordinary,58,Regular,132.25
+City,Ordinary,58,Student/Elderly/PWD,106
+City,Ordinary,59,Regular,134.5
+City,Ordinary,59,Student/Elderly/PWD,107.75
+City,Ordinary,60,Regular,136.75
+City,Ordinary,60,Student/Elderly/PWD,109.5
+Provincial,Ordinary,5,Regular,11
+Provincial,Ordinary,5,Student/Elderly/PWD,8.8
+Provincial,Ordinary,10,Regular,20.5
+Provincial,Ordinary,10,Student/Elderly/PWD,16.5
+Provincial,Ordinary,15,Regular,30
+Provincial,Ordinary,15,Student/Elderly/PWD,24
+Provincial,Ordinary,20,Regular,39.5
+Provincial,Ordinary,20,Student/Elderly/PWD,31.5
+Provincial,Ordinary,25,Regular,49
+Provincial,Ordinary,25,Student/Elderly/PWD,39.25
+Provincial,Ordinary,30,Regular,58.5
+Provincial,Ordinary,30,Student/Elderly/PWD,46.75
+Provincial,Ordinary,35,Regular,68
+Provincial,Ordinary,35,Student/Elderly/PWD,54.5
+Provincial,Ordinary,40,Regular,77.5
+Provincial,Ordinary,40,Student/Elderly/PWD,62
+Provincial,Ordinary,45,Regular,87
+Provincial,Ordinary,45,Student/Elderly/PWD,69.5
+Provincial,Ordinary,50,Regular,96.5
+Provincial,Ordinary,50,Student/Elderly/PWD,77.25
+Provincial,Ordinary,55,Regular,106
+Provincial,Ordinary,55,Student/Elderly/PWD,84.75
+Provincial,Ordinary,60,Regular,115.5
+Provincial,Ordinary,60,Student/Elderly/PWD,92.5
+Provincial,Ordinary,65,Regular,125
+Provincial,Ordinary,65,Student/Elderly/PWD,100
+Provincial,Ordinary,70,Regular,134.5
+Provincial,Ordinary,70,Student/Elderly/PWD,107.5
+Provincial,Ordinary,75,Regular,144
+Provincial,Ordinary,75,Student/Elderly/PWD,115.25
+Provincial,Ordinary,80,Regular,153.5
+Provincial,Ordinary,80,Student/Elderly/PWD,122.75
+Provincial,Ordinary,85,Regular,163
+Provincial,Ordinary,85,Student/Elderly/PWD,130.5
+Provincial,Ordinary,90,Regular,172.5
+Provincial,Ordinary,90,Student/Elderly/PWD,138
+Provincial,Ordinary,95,Regular,182
+Provincial,Ordinary,95,Student/Elderly/PWD,145.5
+Provincial,Ordinary,100,Regular,191.5
+Provincial,Ordinary,100,Student/Elderly/PWD,153.25
+Provincial,Ordinary,105,Regular,201
+Provincial,Ordinary,105,Student/Elderly/PWD,160.75
+Provincial,Ordinary,110,Regular,210.5
+Provincial,Ordinary,110,Student/Elderly/PWD,168.5
+Provincial,Ordinary,115,Regular,220
+Provincial,Ordinary,115,Student/Elderly/PWD,176
+Provincial,Ordinary,120,Regular,229.5
+Provincial,Ordinary,120,Student/Elderly/PWD,183.5
+Provincial,Ordinary,125,Regular,239
+Provincial,Ordinary,125,Student/Elderly/PWD,191.25
+Provincial,Ordinary,130,Regular,248.5
+Provincial,Ordinary,130,Student/Elderly/PWD,198.75
+Provincial,Ordinary,135,Regular,258
+Provincial,Ordinary,135,Student/Elderly/PWD,206.5
+Provincial,Ordinary,140,Regular,267.5
+Provincial,Ordinary,140,Student/Elderly/PWD,214
+Provincial,Ordinary,145,Regular,277
+Provincial,Ordinary,145,Student/Elderly/PWD,221.5
+Provincial,Ordinary,150,Regular,286.5
+Provincial,Ordinary,150,Student/Elderly/PWD,229.25
+Provincial,Ordinary,155,Regular,296
+Provincial,Ordinary,155,Student/Elderly/PWD,236.75
+Provincial,Ordinary,160,Regular,305.5
+Provincial,Ordinary,160,Student/Elderly/PWD,244.5
+Provincial,Ordinary,165,Regular,315
+Provincial,Ordinary,165,Student/Elderly/PWD,252
+Provincial,Ordinary,170,Regular,324.5
+Provincial,Ordinary,170,Student/Elderly/PWD,259.5
+Provincial,Ordinary,175,Regular,334
+Provincial,Ordinary,175,Student/Elderly/PWD,267.25
+Provincial,Ordinary,180,Regular,343.5
+Provincial,Ordinary,180,Student/Elderly/PWD,274.75
+Provincial,Ordinary,185,Regular,353
+Provincial,Ordinary,185,Student/Elderly/PWD,282.5
+Provincial,Ordinary,190,Regular,362.5
+Provincial,Ordinary,190,Student/Elderly/PWD,290
+Provincial,Ordinary,195,Regular,372
+Provincial,Ordinary,195,Student/Elderly/PWD,297.5
+Provincial,Ordinary,200,Regular,381.5
+Provincial,Ordinary,200,Student/Elderly/PWD,305.25
+Provincial,Ordinary,205,Regular,391
+Provincial,Ordinary,205,Student/Elderly/PWD,312.75
+Provincial,Ordinary,210,Regular,400.5
+Provincial,Ordinary,210,Student/Elderly/PWD,320.5
+Provincial,Ordinary,215,Regular,410
+Provincial,Ordinary,215,Student/Elderly/PWD,328
+Provincial,Ordinary,220,Regular,419.5
+Provincial,Ordinary,220,Student/Elderly/PWD,335.5
+Provincial,Ordinary,225,Regular,429
+Provincial,Ordinary,225,Student/Elderly/PWD,343.25
+Provincial,Ordinary,230,Regular,438.5
+Provincial,Ordinary,230,Student/Elderly/PWD,350.75
+Provincial,Ordinary,235,Regular,448
+Provincial,Ordinary,235,Student/Elderly/PWD,358.5
+Provincial,Ordinary,240,Regular,457.5
+Provincial,Ordinary,240,Student/Elderly/PWD,366
+Provincial,Ordinary,245,Regular,467
+Provincial,Ordinary,245,Student/Elderly/PWD,373.5
+Provincial,Ordinary,250,Regular,476.5
+Provincial,Ordinary,250,Student/Elderly/PWD,381.25
+Provincial,Ordinary,255,Regular,486
+Provincial,Ordinary,255,Student/Elderly/PWD,388.75
+Provincial,Ordinary,260,Regular,495.5
+Provincial,Ordinary,260,Student/Elderly/PWD,396.5
+Provincial,Ordinary,265,Regular,505
+Provincial,Ordinary,265,Student/Elderly/PWD,404
+Provincial,Ordinary,270,Regular,514.5
+Provincial,Ordinary,270,Student/Elderly/PWD,411.5
+Provincial,Ordinary,275,Regular,524
+Provincial,Ordinary,275,Student/Elderly/PWD,419.25
+Provincial,Ordinary,280,Regular,533.5
+Provincial,Ordinary,280,Student/Elderly/PWD,426.75
+Provincial,Ordinary,285,Regular,543
+Provincial,Ordinary,285,Student/Elderly/PWD,434.5
+Provincial,Ordinary,290,Regular,552.5
+Provincial,Ordinary,290,Student/Elderly/PWD,442
+Provincial,Ordinary,295,Regular,562
+Provincial,Ordinary,295,Student/Elderly/PWD,449.5
+Provincial,Ordinary,300,Regular,571.5
+Provincial,Ordinary,300,Student/Elderly/PWD,457.25
+Provincial,Ordinary,305,Regular,581
+Provincial,Ordinary,305,Student/Elderly/PWD,464.75
+Provincial,Ordinary,310,Regular,590.5
+Provincial,Ordinary,310,Student/Elderly/PWD,472.5
+Provincial,Ordinary,315,Regular,600
+Provincial,Ordinary,315,Student/Elderly/PWD,480
+Provincial,Ordinary,320,Regular,609.5
+Provincial,Ordinary,320,Student/Elderly/PWD,487.5
+Provincial,Ordinary,325,Regular,619
+Provincial,Ordinary,325,Student/Elderly/PWD,495.25
+Provincial,Ordinary,330,Regular,628.5
+Provincial,Ordinary,330,Student/Elderly/PWD,502.75
+Provincial,Ordinary,335,Regular,638
+Provincial,Ordinary,335,Student/Elderly/PWD,510.5
+Provincial,Ordinary,340,Regular,647.5
+Provincial,Ordinary,340,Student/Elderly/PWD,518
+Provincial,Ordinary,345,Regular,657
+Provincial,Ordinary,345,Student/Elderly/PWD,525.5
+Provincial,Ordinary,350,Regular,666.5
+Provincial,Ordinary,350,Student/Elderly/PWD,533.25
+Provincial,Ordinary,355,Regular,676
+Provincial,Ordinary,355,Student/Elderly/PWD,540.75
+Provincial,Ordinary,360,Regular,685.5
+Provincial,Ordinary,360,Student/Elderly/PWD,548.5
+Provincial,Ordinary,365,Regular,695
+Provincial,Ordinary,365,Student/Elderly/PWD,556
+Provincial,Ordinary,370,Regular,704.5
+Provincial,Ordinary,370,Student/Elderly/PWD,563.5
+Provincial,Ordinary,375,Regular,714
+Provincial,Ordinary,375,Student/Elderly/PWD,571.25
+Provincial,Ordinary,380,Regular,723.5
+Provincial,Ordinary,380,Student/Elderly/PWD,578.75
+Provincial,Ordinary,385,Regular,733
+Provincial,Ordinary,385,Student/Elderly/PWD,586.5
+Provincial,Ordinary,390,Regular,742.5
+Provincial,Ordinary,390,Student/Elderly/PWD,594
+Provincial,Ordinary,395,Regular,752
+Provincial,Ordinary,395,Student/Elderly/PWD,601.5
+Provincial,Ordinary,400,Regular,761.5
+Provincial,Ordinary,400,Student/Elderly/PWD,609.25
+Provincial,Ordinary,405,Regular,771
+Provincial,Ordinary,405,Student/Elderly/PWD,616.75
+Provincial,Ordinary,410,Regular,780.5
+Provincial,Ordinary,410,Student/Elderly/PWD,624.5
+Provincial,Ordinary,415,Regular,790
+Provincial,Ordinary,415,Student/Elderly/PWD,632
+Provincial,Ordinary,420,Regular,799.5
+Provincial,Ordinary,420,Student/Elderly/PWD,639.5
+Provincial,Ordinary,425,Regular,809
+Provincial,Ordinary,425,Student/Elderly/PWD,647.25
+Provincial,Ordinary,430,Regular,818.5
+Provincial,Ordinary,430,Student/Elderly/PWD,654.75
+Provincial,Ordinary,435,Regular,828
+Provincial,Ordinary,435,Student/Elderly/PWD,662.5
+Provincial,Ordinary,440,Regular,837.5
+Provincial,Ordinary,440,Student/Elderly/PWD,670
+Provincial,Ordinary,445,Regular,847
+Provincial,Ordinary,445,Student/Elderly/PWD,677.5
+Provincial,Ordinary,450,Regular,856.5
+Provincial,Ordinary,450,Student/Elderly/PWD,685.25
+Provincial,Ordinary,455,Regular,866
+Provincial,Ordinary,455,Student/Elderly/PWD,692.75
+Provincial,Ordinary,460,Regular,875.5
+Provincial,Ordinary,460,Student/Elderly/PWD,700.5
+Provincial,Ordinary,465,Regular,885
+Provincial,Ordinary,465,Student/Elderly/PWD,708
+Provincial,Ordinary,470,Regular,894.5
+Provincial,Ordinary,470,Student/Elderly/PWD,715.5
+Provincial,Ordinary,475,Regular,904
+Provincial,Ordinary,475,Student/Elderly/PWD,723.25
+Provincial,Ordinary,480,Regular,913.5
+Provincial,Ordinary,480,Student/Elderly/PWD,730.75
+Provincial,Ordinary,485,Regular,923
+Provincial,Ordinary,485,Student/Elderly/PWD,738.5
+Provincial,Ordinary,490,Regular,932.5
+Provincial,Ordinary,490,Student/Elderly/PWD,746
+Provincial,Ordinary,495,Regular,942
+Provincial,Ordinary,495,Student/Elderly/PWD,753.5
+Provincial,Ordinary,500,Regular,951.5
+Provincial,Ordinary,500,Student/Elderly/PWD,761.25
+Provincial,Ordinary,505,Regular,961
+Provincial,Ordinary,505,Student/Elderly/PWD,768.75
+Provincial,Ordinary,510,Regular,970.5
+Provincial,Ordinary,510,Student/Elderly/PWD,776.5
+Provincial,Ordinary,515,Regular,980
+Provincial,Ordinary,515,Student/Elderly/PWD,784
+Provincial,Ordinary,520,Regular,989.5
+Provincial,Ordinary,520,Student/Elderly/PWD,791.5
+Provincial,Ordinary,525,Regular,999
+Provincial,Ordinary,525,Student/Elderly/PWD,799.25
+Provincial,Ordinary,530,Regular,1008.5
+Provincial,Ordinary,530,Student/Elderly/PWD,806.75
+Provincial,Ordinary,535,Regular,1018
+Provincial,Ordinary,535,Student/Elderly/PWD,814.5
+Provincial,Ordinary,540,Regular,1027.5
+Provincial,Ordinary,540,Student/Elderly/PWD,822
+Provincial,Ordinary,545,Regular,1037
+Provincial,Ordinary,545,Student/Elderly/PWD,829.5
+Provincial,Ordinary,550,Regular,1046.5
+Provincial,Ordinary,550,Student/Elderly/PWD,837.25
+Provincial,Ordinary,555,Regular,1056
+Provincial,Ordinary,555,Student/Elderly/PWD,844.75
+Provincial,Ordinary,560,Regular,1065.5
+Provincial,Ordinary,560,Student/Elderly/PWD,852.5
+Provincial,Ordinary,565,Regular,1075
+Provincial,Ordinary,565,Student/Elderly/PWD,860
+Provincial,Ordinary,570,Regular,1084.5
+Provincial,Ordinary,570,Student/Elderly/PWD,867.5
+Provincial,Ordinary,575,Regular,1094
+Provincial,Ordinary,575,Student/Elderly/PWD,875.25
+Provincial,Ordinary,580,Regular,1103.5
+Provincial,Ordinary,580,Student/Elderly/PWD,882.75
+Provincial,Ordinary,585,Regular,1113
+Provincial,Ordinary,585,Student/Elderly/PWD,890.5
+Provincial,Ordinary,590,Regular,1122.5
+Provincial,Ordinary,590,Student/Elderly/PWD,898
+Provincial,Ordinary,595,Regular,1132
+Provincial,Ordinary,595,Student/Elderly/PWD,905.5
+Provincial,Ordinary,600,Regular,1141.5
+Provincial,Ordinary,600,Student/Elderly/PWD,913.25
+Provincial,Deluxe,5,Regular,11.25
+Provincial,Deluxe,5,Student/Elderly/PWD,9
+Provincial,Deluxe,10,Regular,22.5
+Provincial,Deluxe,10,Student/Elderly/PWD,18
+Provincial,Deluxe,15,Regular,33.75
+Provincial,Deluxe,15,Student/Elderly/PWD,27
+Provincial,Deluxe,20,Regular,45
+Provincial,Deluxe,20,Student/Elderly/PWD,36
+Provincial,Deluxe,25,Regular,56.25
+Provincial,Deluxe,25,Student/Elderly/PWD,45
+Provincial,Deluxe,30,Regular,67.5
+Provincial,Deluxe,30,Student/Elderly/PWD,54
+Provincial,Deluxe,35,Regular,78.75
+Provincial,Deluxe,35,Student/Elderly/PWD,63
+Provincial,Deluxe,40,Regular,90
+Provincial,Deluxe,40,Student/Elderly/PWD,72
+Provincial,Deluxe,45,Regular,101.25
+Provincial,Deluxe,45,Student/Elderly/PWD,81
+Provincial,Deluxe,50,Regular,112.5
+Provincial,Deluxe,50,Student/Elderly/PWD,90
+Provincial,Deluxe,55,Regular,123.75
+Provincial,Deluxe,55,Student/Elderly/PWD,99
+Provincial,Deluxe,60,Regular,135
+Provincial,Deluxe,60,Student/Elderly/PWD,108
+Provincial,Deluxe,65,Regular,146.25
+Provincial,Deluxe,65,Student/Elderly/PWD,117
+Provincial,Deluxe,70,Regular,157.5
+Provincial,Deluxe,70,Student/Elderly/PWD,126
+Provincial,Deluxe,75,Regular,168.75
+Provincial,Deluxe,75,Student/Elderly/PWD,135
+Provincial,Deluxe,80,Regular,180
+Provincial,Deluxe,80,Student/Elderly/PWD,144
+Provincial,Deluxe,85,Regular,191.25
+Provincial,Deluxe,85,Student/Elderly/PWD,153
+Provincial,Deluxe,90,Regular,202.5
+Provincial,Deluxe,90,Student/Elderly/PWD,162
+Provincial,Deluxe,95,Regular,213.75
+Provincial,Deluxe,95,Student/Elderly/PWD,171
+Provincial,Deluxe,100,Regular,225
+Provincial,Deluxe,100,Student/Elderly/PWD,180
+Provincial,Deluxe,105,Regular,236.25
+Provincial,Deluxe,105,Student/Elderly/PWD,189
+Provincial,Deluxe,110,Regular,247.5
+Provincial,Deluxe,110,Student/Elderly/PWD,198
+Provincial,Deluxe,115,Regular,258.75
+Provincial,Deluxe,115,Student/Elderly/PWD,207
+Provincial,Deluxe,120,Regular,270
+Provincial,Deluxe,120,Student/Elderly/PWD,216
+Provincial,Deluxe,125,Regular,281.25
+Provincial,Deluxe,125,Student/Elderly/PWD,225
+Provincial,Deluxe,130,Regular,292.5
+Provincial,Deluxe,130,Student/Elderly/PWD,234
+Provincial,Deluxe,135,Regular,303.75
+Provincial,Deluxe,135,Student/Elderly/PWD,243
+Provincial,Deluxe,140,Regular,315
+Provincial,Deluxe,140,Student/Elderly/PWD,252
+Provincial,Deluxe,145,Regular,326.25
+Provincial,Deluxe,145,Student/Elderly/PWD,261
+Provincial,Deluxe,150,Regular,337.5
+Provincial,Deluxe,150,Student/Elderly/PWD,270
+Provincial,Deluxe,155,Regular,348.75
+Provincial,Deluxe,155,Student/Elderly/PWD,279
+Provincial,Deluxe,160,Regular,360
+Provincial,Deluxe,160,Student/Elderly/PWD,288
+Provincial,Deluxe,165,Regular,371.25
+Provincial,Deluxe,165,Student/Elderly/PWD,297
+Provincial,Deluxe,170,Regular,382.5
+Provincial,Deluxe,170,Student/Elderly/PWD,306
+Provincial,Deluxe,175,Regular,393.75
+Provincial,Deluxe,175,Student/Elderly/PWD,315
+Provincial,Deluxe,180,Regular,405
+Provincial,Deluxe,180,Student/Elderly/PWD,324
+Provincial,Deluxe,185,Regular,416.25
+Provincial,Deluxe,185,Student/Elderly/PWD,333
+Provincial,Deluxe,190,Regular,427.5
+Provincial,Deluxe,190,Student/Elderly/PWD,342
+Provincial,Deluxe,195,Regular,438.75
+Provincial,Deluxe,195,Student/Elderly/PWD,351
+Provincial,Deluxe,200,Regular,450
+Provincial,Deluxe,200,Student/Elderly/PWD,360
+Provincial,Deluxe,205,Regular,461.25
+Provincial,Deluxe,205,Student/Elderly/PWD,369
+Provincial,Deluxe,210,Regular,472.5
+Provincial,Deluxe,210,Student/Elderly/PWD,378
+Provincial,Deluxe,215,Regular,483.75
+Provincial,Deluxe,215,Student/Elderly/PWD,387
+Provincial,Deluxe,220,Regular,495
+Provincial,Deluxe,220,Student/Elderly/PWD,396
+Provincial,Deluxe,225,Regular,506.25
+Provincial,Deluxe,225,Student/Elderly/PWD,405
+Provincial,Deluxe,230,Regular,517.5
+Provincial,Deluxe,230,Student/Elderly/PWD,414
+Provincial,Deluxe,235,Regular,528.75
+Provincial,Deluxe,235,Student/Elderly/PWD,423
+Provincial,Deluxe,240,Regular,540
+Provincial,Deluxe,240,Student/Elderly/PWD,432
+Provincial,Deluxe,245,Regular,551.25
+Provincial,Deluxe,245,Student/Elderly/PWD,441
+Provincial,Deluxe,250,Regular,562.5
+Provincial,Deluxe,250,Student/Elderly/PWD,450
+Provincial,Deluxe,255,Regular,573.75
+Provincial,Deluxe,255,Student/Elderly/PWD,459
+Provincial,Deluxe,260,Regular,585
+Provincial,Deluxe,260,Student/Elderly/PWD,468
+Provincial,Deluxe,265,Regular,596.25
+Provincial,Deluxe,265,Student/Elderly/PWD,477
+Provincial,Deluxe,270,Regular,607.5
+Provincial,Deluxe,270,Student/Elderly/PWD,486
+Provincial,Deluxe,275,Regular,618.75
+Provincial,Deluxe,275,Student/Elderly/PWD,495
+Provincial,Deluxe,280,Regular,630
+Provincial,Deluxe,280,Student/Elderly/PWD,504
+Provincial,Deluxe,285,Regular,641.25
+Provincial,Deluxe,285,Student/Elderly/PWD,513
+Provincial,Deluxe,290,Regular,652.5
+Provincial,Deluxe,290,Student/Elderly/PWD,522
+Provincial,Deluxe,295,Regular,663.75
+Provincial,Deluxe,295,Student/Elderly/PWD,531
+Provincial,Deluxe,300,Regular,675
+Provincial,Deluxe,300,Student/Elderly/PWD,540
+Provincial,Deluxe,305,Regular,686.25
+Provincial,Deluxe,305,Student/Elderly/PWD,549
+Provincial,Deluxe,310,Regular,697.5
+Provincial,Deluxe,310,Student/Elderly/PWD,558
+Provincial,Deluxe,315,Regular,708.75
+Provincial,Deluxe,315,Student/Elderly/PWD,567
+Provincial,Deluxe,320,Regular,720
+Provincial,Deluxe,320,Student/Elderly/PWD,576
+Provincial,Deluxe,325,Regular,731.25
+Provincial,Deluxe,325,Student/Elderly/PWD,585
+Provincial,Deluxe,330,Regular,742.5
+Provincial,Deluxe,330,Student/Elderly/PWD,594
+Provincial,Deluxe,335,Regular,753.75
+Provincial,Deluxe,335,Student/Elderly/PWD,603
+Provincial,Deluxe,340,Regular,765
+Provincial,Deluxe,340,Student/Elderly/PWD,612
+Provincial,Deluxe,345,Regular,776.25
+Provincial,Deluxe,345,Student/Elderly/PWD,621
+Provincial,Deluxe,350,Regular,787.5
+Provincial,Deluxe,350,Student/Elderly/PWD,630
+Provincial,Deluxe,355,Regular,798.75
+Provincial,Deluxe,355,Student/Elderly/PWD,639
+Provincial,Deluxe,360,Regular,810
+Provincial,Deluxe,360,Student/Elderly/PWD,648
+Provincial,Deluxe,365,Regular,821.25
+Provincial,Deluxe,365,Student/Elderly/PWD,657
+Provincial,Deluxe,370,Regular,832.5
+Provincial,Deluxe,370,Student/Elderly/PWD,666
+Provincial,Deluxe,375,Regular,843.75
+Provincial,Deluxe,375,Student/Elderly/PWD,675
+Provincial,Deluxe,380,Regular,855
+Provincial,Deluxe,380,Student/Elderly/PWD,684
+Provincial,Deluxe,385,Regular,866.25
+Provincial,Deluxe,385,Student/Elderly/PWD,693
+Provincial,Deluxe,390,Regular,877.5
+Provincial,Deluxe,390,Student/Elderly/PWD,702
+Provincial,Deluxe,395,Regular,888.75
+Provincial,Deluxe,395,Student/Elderly/PWD,711
+Provincial,Deluxe,400,Regular,900
+Provincial,Deluxe,400,Student/Elderly/PWD,720
+Provincial,Deluxe,405,Regular,911.25
+Provincial,Deluxe,405,Student/Elderly/PWD,729
+Provincial,Deluxe,410,Regular,922.5
+Provincial,Deluxe,410,Student/Elderly/PWD,738
+Provincial,Deluxe,415,Regular,933.75
+Provincial,Deluxe,415,Student/Elderly/PWD,747
+Provincial,Deluxe,420,Regular,945
+Provincial,Deluxe,420,Student/Elderly/PWD,756
+Provincial,Deluxe,425,Regular,956.25
+Provincial,Deluxe,425,Student/Elderly/PWD,765
+Provincial,Deluxe,430,Regular,967.5
+Provincial,Deluxe,430,Student/Elderly/PWD,774
+Provincial,Deluxe,435,Regular,978.75
+Provincial,Deluxe,435,Student/Elderly/PWD,783
+Provincial,Deluxe,440,Regular,990
+Provincial,Deluxe,440,Student/Elderly/PWD,792
+Provincial,Deluxe,445,Regular,1001.25
+Provincial,Deluxe,445,Student/Elderly/PWD,801
+Provincial,Deluxe,450,Regular,1012.5
+Provincial,Deluxe,450,Student/Elderly/PWD,810
+Provincial,Deluxe,455,Regular,1023.75
+Provincial,Deluxe,455,Student/Elderly/PWD,819
+Provincial,Deluxe,460,Regular,1035
+Provincial,Deluxe,460,Student/Elderly/PWD,828
+Provincial,Deluxe,465,Regular,1046.25
+Provincial,Deluxe,465,Student/Elderly/PWD,837
+Provincial,Deluxe,470,Regular,1057.5
+Provincial,Deluxe,470,Student/Elderly/PWD,846
+Provincial,Deluxe,475,Regular,1068.75
+Provincial,Deluxe,475,Student/Elderly/PWD,855
+Provincial,Deluxe,480,Regular,1080
+Provincial,Deluxe,480,Student/Elderly/PWD,864
+Provincial,Deluxe,485,Regular,1091.25
+Provincial,Deluxe,485,Student/Elderly/PWD,873
+Provincial,Deluxe,490,Regular,1102.5
+Provincial,Deluxe,490,Student/Elderly/PWD,882
+Provincial,Deluxe,495,Regular,1113.75
+Provincial,Deluxe,495,Student/Elderly/PWD,891
+Provincial,Deluxe,500,Regular,1125
+Provincial,Deluxe,500,Student/Elderly/PWD,900
+Provincial,Deluxe,505,Regular,1136.25
+Provincial,Deluxe,505,Student/Elderly/PWD,909
+Provincial,Deluxe,510,Regular,1147.5
+Provincial,Deluxe,510,Student/Elderly/PWD,918
+Provincial,Deluxe,515,Regular,1158.75
+Provincial,Deluxe,515,Student/Elderly/PWD,927
+Provincial,Deluxe,520,Regular,1170
+Provincial,Deluxe,520,Student/Elderly/PWD,936
+Provincial,Deluxe,525,Regular,1181.25
+Provincial,Deluxe,525,Student/Elderly/PWD,945
+Provincial,Deluxe,530,Regular,1192.5
+Provincial,Deluxe,530,Student/Elderly/PWD,954
+Provincial,Deluxe,535,Regular,1203.75
+Provincial,Deluxe,535,Student/Elderly/PWD,963
+Provincial,Deluxe,540,Regular,1215
+Provincial,Deluxe,540,Student/Elderly/PWD,972
+Provincial,Deluxe,545,Regular,1226.25
+Provincial,Deluxe,545,Student/Elderly/PWD,981
+Provincial,Deluxe,550,Regular,1237.5
+Provincial,Deluxe,550,Student/Elderly/PWD,990
+Provincial,Deluxe,555,Regular,1248.75
+Provincial,Deluxe,555,Student/Elderly/PWD,999
+Provincial,Deluxe,560,Regular,1260
+Provincial,Deluxe,560,Student/Elderly/PWD,1008
+Provincial,Deluxe,565,Regular,1271.25
+Provincial,Deluxe,565,Student/Elderly/PWD,1017
+Provincial,Deluxe,570,Regular,1282.5
+Provincial,Deluxe,570,Student/Elderly/PWD,1026
+Provincial,Deluxe,575,Regular,1293.75
+Provincial,Deluxe,575,Student/Elderly/PWD,1035
+Provincial,Deluxe,580,Regular,1305
+Provincial,Deluxe,580,Student/Elderly/PWD,1044
+Provincial,Deluxe,585,Regular,1316.25
+Provincial,Deluxe,585,Student/Elderly/PWD,1053
+Provincial,Deluxe,590,Regular,1327.5
+Provincial,Deluxe,590,Student/Elderly/PWD,1062
+Provincial,Deluxe,595,Regular,1338.75
+Provincial,Deluxe,595,Student/Elderly/PWD,1071
+Provincial,Deluxe,600,Regular,1350
+Provincial,Deluxe,600,Student/Elderly/PWD,1080
+Provincial,Super Deluxe,5,Regular,11.75
+Provincial,Super Deluxe,5,Student/Elderly/PWD,9.5
+Provincial,Super Deluxe,10,Regular,23.5
+Provincial,Super Deluxe,10,Student/Elderly/PWD,18.75
+Provincial,Super Deluxe,15,Regular,35.25
+Provincial,Super Deluxe,15,Student/Elderly/PWD,28.25
+Provincial,Super Deluxe,20,Regular,47
+Provincial,Super Deluxe,20,Student/Elderly/PWD,37.5
+Provincial,Super Deluxe,25,Regular,58.75
+Provincial,Super Deluxe,25,Student/Elderly/PWD,47
+Provincial,Super Deluxe,30,Regular,70.5
+Provincial,Super Deluxe,30,Student/Elderly/PWD,56.5
+Provincial,Super Deluxe,35,Regular,82.25
+Provincial,Super Deluxe,35,Student/Elderly/PWD,65.75
+Provincial,Super Deluxe,40,Regular,94
+Provincial,Super Deluxe,40,Student/Elderly/PWD,75.25
+Provincial,Super Deluxe,45,Regular,105.75
+Provincial,Super Deluxe,45,Student/Elderly/PWD,84.5
+Provincial,Super Deluxe,50,Regular,117.5
+Provincial,Super Deluxe,50,Student/Elderly/PWD,94
+Provincial,Super Deluxe,55,Regular,129.25
+Provincial,Super Deluxe,55,Student/Elderly/PWD,103.5
+Provincial,Super Deluxe,60,Regular,141
+Provincial,Super Deluxe,60,Student/Elderly/PWD,112.75
+Provincial,Super Deluxe,65,Regular,152.75
+Provincial,Super Deluxe,65,Student/Elderly/PWD,122.25
+Provincial,Super Deluxe,70,Regular,164.5
+Provincial,Super Deluxe,70,Student/Elderly/PWD,131.5
+Provincial,Super Deluxe,75,Regular,176.25
+Provincial,Super Deluxe,75,Student/Elderly/PWD,141
+Provincial,Super Deluxe,80,Regular,188
+Provincial,Super Deluxe,80,Student/Elderly/PWD,150.5
+Provincial,Super Deluxe,85,Regular,199.75
+Provincial,Super Deluxe,85,Student/Elderly/PWD,159.75
+Provincial,Super Deluxe,90,Regular,211.5
+Provincial,Super Deluxe,90,Student/Elderly/PWD,169.25
+Provincial,Super Deluxe,95,Regular,223.25
+Provincial,Super Deluxe,95,Student/Elderly/PWD,178.5
+Provincial,Super Deluxe,100,Regular,235
+Provincial,Super Deluxe,100,Student/Elderly/PWD,188
+Provincial,Super Deluxe,105,Regular,246.75
+Provincial,Super Deluxe,105,Student/Elderly/PWD,197.5
+Provincial,Super Deluxe,110,Regular,258.5
+Provincial,Super Deluxe,110,Student/Elderly/PWD,206.75
+Provincial,Super Deluxe,115,Regular,270.25
+Provincial,Super Deluxe,115,Student/Elderly/PWD,216.25
+Provincial,Super Deluxe,120,Regular,282
+Provincial,Super Deluxe,120,Student/Elderly/PWD,225.5
+Provincial,Super Deluxe,125,Regular,293.75
+Provincial,Super Deluxe,125,Student/Elderly/PWD,235
+Provincial,Super Deluxe,130,Regular,305.5
+Provincial,Super Deluxe,130,Student/Elderly/PWD,244.5
+Provincial,Super Deluxe,135,Regular,317.25
+Provincial,Super Deluxe,135,Student/Elderly/PWD,253.75
+Provincial,Super Deluxe,140,Regular,329
+Provincial,Super Deluxe,140,Student/Elderly/PWD,263.25
+Provincial,Super Deluxe,145,Regular,340.75
+Provincial,Super Deluxe,145,Student/Elderly/PWD,272.5
+Provincial,Super Deluxe,150,Regular,352.5
+Provincial,Super Deluxe,150,Student/Elderly/PWD,282
+Provincial,Super Deluxe,155,Regular,364.25
+Provincial,Super Deluxe,155,Student/Elderly/PWD,291.5
+Provincial,Super Deluxe,160,Regular,376
+Provincial,Super Deluxe,160,Student/Elderly/PWD,300.75
+Provincial,Super Deluxe,165,Regular,387.75
+Provincial,Super Deluxe,165,Student/Elderly/PWD,310.25
+Provincial,Super Deluxe,170,Regular,399.5
+Provincial,Super Deluxe,170,Student/Elderly/PWD,319.5
+Provincial,Super Deluxe,175,Regular,411.25
+Provincial,Super Deluxe,175,Student/Elderly/PWD,329
+Provincial,Super Deluxe,180,Regular,423
+Provincial,Super Deluxe,180,Student/Elderly/PWD,338.5
+Provincial,Super Deluxe,185,Regular,434.75
+Provincial,Super Deluxe,185,Student/Elderly/PWD,347.75
+Provincial,Super Deluxe,190,Regular,446.5
+Provincial,Super Deluxe,190,Student/Elderly/PWD,357.25
+Provincial,Super Deluxe,195,Regular,458.25
+Provincial,Super Deluxe,195,Student/Elderly/PWD,366.5
+Provincial,Super Deluxe,200,Regular,470
+Provincial,Super Deluxe,200,Student/Elderly/PWD,376
+Provincial,Super Deluxe,205,Regular,481.75
+Provincial,Super Deluxe,205,Student/Elderly/PWD,385.5
+Provincial,Super Deluxe,210,Regular,493.5
+Provincial,Super Deluxe,210,Student/Elderly/PWD,394.75
+Provincial,Super Deluxe,215,Regular,505.25
+Provincial,Super Deluxe,215,Student/Elderly/PWD,404.25
+Provincial,Super Deluxe,220,Regular,517
+Provincial,Super Deluxe,220,Student/Elderly/PWD,413.5
+Provincial,Super Deluxe,225,Regular,528.75
+Provincial,Super Deluxe,225,Student/Elderly/PWD,423
+Provincial,Super Deluxe,230,Regular,540.5
+Provincial,Super Deluxe,230,Student/Elderly/PWD,432.5
+Provincial,Super Deluxe,235,Regular,552.25
+Provincial,Super Deluxe,235,Student/Elderly/PWD,441.75
+Provincial,Super Deluxe,240,Regular,564
+Provincial,Super Deluxe,240,Student/Elderly/PWD,451.25
+Provincial,Super Deluxe,245,Regular,575.75
+Provincial,Super Deluxe,245,Student/Elderly/PWD,460.5
+Provincial,Super Deluxe,250,Regular,587.5
+Provincial,Super Deluxe,250,Student/Elderly/PWD,470
+Provincial,Super Deluxe,255,Regular,599.25
+Provincial,Super Deluxe,255,Student/Elderly/PWD,479.5
+Provincial,Super Deluxe,260,Regular,611
+Provincial,Super Deluxe,260,Student/Elderly/PWD,488.75
+Provincial,Super Deluxe,265,Regular,622.75
+Provincial,Super Deluxe,265,Student/Elderly/PWD,498.25
+Provincial,Super Deluxe,270,Regular,634.5
+Provincial,Super Deluxe,270,Student/Elderly/PWD,507.5
+Provincial,Super Deluxe,275,Regular,646.25
+Provincial,Super Deluxe,275,Student/Elderly/PWD,517
+Provincial,Super Deluxe,280,Regular,658
+Provincial,Super Deluxe,280,Student/Elderly/PWD,526.5
+Provincial,Super Deluxe,285,Regular,669.75
+Provincial,Super Deluxe,285,Student/Elderly/PWD,535.75
+Provincial,Super Deluxe,290,Regular,681.5
+Provincial,Super Deluxe,290,Student/Elderly/PWD,545.25
+Provincial,Super Deluxe,295,Regular,693.25
+Provincial,Super Deluxe,295,Student/Elderly/PWD,554.5
+Provincial,Super Deluxe,300,Regular,705
+Provincial,Super Deluxe,300,Student/Elderly/PWD,564
+Provincial,Super Deluxe,305,Regular,716.75
+Provincial,Super Deluxe,305,Student/Elderly/PWD,573.5
+Provincial,Super Deluxe,310,Regular,728.5
+Provincial,Super Deluxe,310,Student/Elderly/PWD,582.75
+Provincial,Super Deluxe,315,Regular,740.25
+Provincial,Super Deluxe,315,Student/Elderly/PWD,592.25
+Provincial,Super Deluxe,320,Regular,752
+Provincial,Super Deluxe,320,Student/Elderly/PWD,601.5
+Provincial,Super Deluxe,325,Regular,763.75
+Provincial,Super Deluxe,325,Student/Elderly/PWD,611
+Provincial,Super Deluxe,330,Regular,775.5
+Provincial,Super Deluxe,330,Student/Elderly/PWD,620.5
+Provincial,Super Deluxe,335,Regular,787.25
+Provincial,Super Deluxe,335,Student/Elderly/PWD,629.75
+Provincial,Super Deluxe,340,Regular,799
+Provincial,Super Deluxe,340,Student/Elderly/PWD,639.25
+Provincial,Super Deluxe,345,Regular,810.75
+Provincial,Super Deluxe,345,Student/Elderly/PWD,648.5
+Provincial,Super Deluxe,350,Regular,822.5
+Provincial,Super Deluxe,350,Student/Elderly/PWD,658
+Provincial,Super Deluxe,355,Regular,834.25
+Provincial,Super Deluxe,355,Student/Elderly/PWD,667.5
+Provincial,Super Deluxe,360,Regular,846
+Provincial,Super Deluxe,360,Student/Elderly/PWD,676.75
+Provincial,Super Deluxe,365,Regular,857.75
+Provincial,Super Deluxe,365,Student/Elderly/PWD,686.25
+Provincial,Super Deluxe,370,Regular,869.5
+Provincial,Super Deluxe,370,Student/Elderly/PWD,695.5
+Provincial,Super Deluxe,375,Regular,881.25
+Provincial,Super Deluxe,375,Student/Elderly/PWD,705
+Provincial,Super Deluxe,380,Regular,893
+Provincial,Super Deluxe,380,Student/Elderly/PWD,714.5
+Provincial,Super Deluxe,385,Regular,904.75
+Provincial,Super Deluxe,385,Student/Elderly/PWD,723.75
+Provincial,Super Deluxe,390,Regular,916.5
+Provincial,Super Deluxe,390,Student/Elderly/PWD,733.25
+Provincial,Super Deluxe,395,Regular,928.25
+Provincial,Super Deluxe,395,Student/Elderly/PWD,742.5
+Provincial,Super Deluxe,400,Regular,940
+Provincial,Super Deluxe,400,Student/Elderly/PWD,752
+Provincial,Super Deluxe,405,Regular,951.75
+Provincial,Super Deluxe,405,Student/Elderly/PWD,761.5
+Provincial,Super Deluxe,410,Regular,963.5
+Provincial,Super Deluxe,410,Student/Elderly/PWD,770.75
+Provincial,Super Deluxe,415,Regular,975.25
+Provincial,Super Deluxe,415,Student/Elderly/PWD,780.25
+Provincial,Super Deluxe,420,Regular,987
+Provincial,Super Deluxe,420,Student/Elderly/PWD,789.5
+Provincial,Super Deluxe,425,Regular,998.75
+Provincial,Super Deluxe,425,Student/Elderly/PWD,799
+Provincial,Super Deluxe,430,Regular,1010.5
+Provincial,Super Deluxe,430,Student/Elderly/PWD,808.5
+Provincial,Super Deluxe,435,Regular,1022.25
+Provincial,Super Deluxe,435,Student/Elderly/PWD,817.75
+Provincial,Super Deluxe,440,Regular,1034
+Provincial,Super Deluxe,440,Student/Elderly/PWD,827.25
+Provincial,Super Deluxe,445,Regular,1045.75
+Provincial,Super Deluxe,445,Student/Elderly/PWD,836.5
+Provincial,Super Deluxe,450,Regular,1057.5
+Provincial,Super Deluxe,450,Student/Elderly/PWD,846
+Provincial,Super Deluxe,455,Regular,1069.25
+Provincial,Super Deluxe,455,Student/Elderly/PWD,855.5
+Provincial,Super Deluxe,460,Regular,1081
+Provincial,Super Deluxe,460,Student/Elderly/PWD,864.75
+Provincial,Super Deluxe,465,Regular,1092.75
+Provincial,Super Deluxe,465,Student/Elderly/PWD,874.25
+Provincial,Super Deluxe,470,Regular,1104.5
+Provincial,Super Deluxe,470,Student/Elderly/PWD,883.5
+Provincial,Super Deluxe,475,Regular,1116.25
+Provincial,Super Deluxe,475,Student/Elderly/PWD,893
+Provincial,Super Deluxe,480,Regular,1128
+Provincial,Super Deluxe,480,Student/Elderly/PWD,902.5
+Provincial,Super Deluxe,485,Regular,1139.75
+Provincial,Super Deluxe,485,Student/Elderly/PWD,911.75
+Provincial,Super Deluxe,490,Regular,1151.5
+Provincial,Super Deluxe,490,Student/Elderly/PWD,921.25
+Provincial,Super Deluxe,495,Regular,1163.25
+Provincial,Super Deluxe,495,Student/Elderly/PWD,930.5
+Provincial,Super Deluxe,500,Regular,1175
+Provincial,Super Deluxe,500,Student/Elderly/PWD,940
+Provincial,Super Deluxe,505,Regular,1186.75
+Provincial,Super Deluxe,505,Student/Elderly/PWD,949.5
+Provincial,Super Deluxe,510,Regular,1198.5
+Provincial,Super Deluxe,510,Student/Elderly/PWD,958.75
+Provincial,Super Deluxe,515,Regular,1210.25
+Provincial,Super Deluxe,515,Student/Elderly/PWD,968.25
+Provincial,Super Deluxe,520,Regular,1222
+Provincial,Super Deluxe,520,Student/Elderly/PWD,977.5
+Provincial,Super Deluxe,525,Regular,1233.75
+Provincial,Super Deluxe,525,Student/Elderly/PWD,987
+Provincial,Super Deluxe,530,Regular,1245.5
+Provincial,Super Deluxe,530,Student/Elderly/PWD,996.5
+Provincial,Super Deluxe,535,Regular,1257.25
+Provincial,Super Deluxe,535,Student/Elderly/PWD,1005.75
+Provincial,Super Deluxe,540,Regular,1269
+Provincial,Super Deluxe,540,Student/Elderly/PWD,1015.25
+Provincial,Super Deluxe,545,Regular,1280.75
+Provincial,Super Deluxe,545,Student/Elderly/PWD,1024.5
+Provincial,Super Deluxe,550,Regular,1292.5
+Provincial,Super Deluxe,550,Student/Elderly/PWD,1034
+Provincial,Super Deluxe,555,Regular,1304.25
+Provincial,Super Deluxe,555,Student/Elderly/PWD,1043.5
+Provincial,Super Deluxe,560,Regular,1316
+Provincial,Super Deluxe,560,Student/Elderly/PWD,1052.75
+Provincial,Super Deluxe,565,Regular,1327.75
+Provincial,Super Deluxe,565,Student/Elderly/PWD,1062.25
+Provincial,Super Deluxe,570,Regular,1339.5
+Provincial,Super Deluxe,570,Student/Elderly/PWD,1071.5
+Provincial,Super Deluxe,575,Regular,1351.25
+Provincial,Super Deluxe,575,Student/Elderly/PWD,1081
+Provincial,Super Deluxe,580,Regular,1363
+Provincial,Super Deluxe,580,Student/Elderly/PWD,1090.5
+Provincial,Super Deluxe,585,Regular,1374.75
+Provincial,Super Deluxe,585,Student/Elderly/PWD,1099.75
+Provincial,Super Deluxe,590,Regular,1386.5
+Provincial,Super Deluxe,590,Student/Elderly/PWD,1109.25
+Provincial,Super Deluxe,595,Regular,1398.25
+Provincial,Super Deluxe,595,Student/Elderly/PWD,1118.5
+Provincial,Super Deluxe,600,Regular,1410
+Provincial,Super Deluxe,600,Student/Elderly/PWD,1128
+Provincial,Luxury,5,Regular,14.5
+Provincial,Luxury,5,Student/Elderly/PWD,11.5
+Provincial,Luxury,10,Regular,29
+Provincial,Luxury,10,Student/Elderly/PWD,23.25
+Provincial,Luxury,15,Regular,43.5
+Provincial,Luxury,15,Student/Elderly/PWD,34.75
+Provincial,Luxury,20,Regular,58
+Provincial,Luxury,20,Student/Elderly/PWD,46.5
+Provincial,Luxury,25,Regular,72.5
+Provincial,Luxury,25,Student/Elderly/PWD,58
+Provincial,Luxury,30,Regular,87
+Provincial,Luxury,30,Student/Elderly/PWD,69.5
+Provincial,Luxury,35,Regular,101.5
+Provincial,Luxury,35,Student/Elderly/PWD,81.25
+Provincial,Luxury,40,Regular,116
+Provincial,Luxury,40,Student/Elderly/PWD,92.75
+Provincial,Luxury,45,Regular,130.5
+Provincial,Luxury,45,Student/Elderly/PWD,104.5
+Provincial,Luxury,50,Regular,145
+Provincial,Luxury,50,Student/Elderly/PWD,116
+Provincial,Luxury,55,Regular,159.5
+Provincial,Luxury,55,Student/Elderly/PWD,127.5
+Provincial,Luxury,60,Regular,174
+Provincial,Luxury,60,Student/Elderly/PWD,139.25
+Provincial,Luxury,65,Regular,188.5
+Provincial,Luxury,65,Student/Elderly/PWD,150.75
+Provincial,Luxury,70,Regular,203
+Provincial,Luxury,70,Student/Elderly/PWD,162.5
+Provincial,Luxury,75,Regular,217.5
+Provincial,Luxury,75,Student/Elderly/PWD,174
+Provincial,Luxury,80,Regular,232
+Provincial,Luxury,80,Student/Elderly/PWD,185.5
+Provincial,Luxury,85,Regular,246.5
+Provincial,Luxury,85,Student/Elderly/PWD,197.25
+Provincial,Luxury,90,Regular,261
+Provincial,Luxury,90,Student/Elderly/PWD,208.75
+Provincial,Luxury,95,Regular,275.5
+Provincial,Luxury,95,Student/Elderly/PWD,220.5
+Provincial,Luxury,100,Regular,290
+Provincial,Luxury,100,Student/Elderly/PWD,232
+Provincial,Luxury,105,Regular,304.5
+Provincial,Luxury,105,Student/Elderly/PWD,243.5
+Provincial,Luxury,110,Regular,319
+Provincial,Luxury,110,Student/Elderly/PWD,255.25
+Provincial,Luxury,115,Regular,333.5
+Provincial,Luxury,115,Student/Elderly/PWD,266.75
+Provincial,Luxury,120,Regular,348
+Provincial,Luxury,120,Student/Elderly/PWD,278.5
+Provincial,Luxury,125,Regular,362.5
+Provincial,Luxury,125,Student/Elderly/PWD,290
+Provincial,Luxury,130,Regular,377
+Provincial,Luxury,130,Student/Elderly/PWD,301.5
+Provincial,Luxury,135,Regular,391.5
+Provincial,Luxury,135,Student/Elderly/PWD,313.25
+Provincial,Luxury,140,Regular,406
+Provincial,Luxury,140,Student/Elderly/PWD,324.75
+Provincial,Luxury,145,Regular,420.5
+Provincial,Luxury,145,Student/Elderly/PWD,336.5
+Provincial,Luxury,150,Regular,435
+Provincial,Luxury,150,Student/Elderly/PWD,348
+Provincial,Luxury,155,Regular,449.5
+Provincial,Luxury,155,Student/Elderly/PWD,359.5
+Provincial,Luxury,160,Regular,464
+Provincial,Luxury,160,Student/Elderly/PWD,371.25
+Provincial,Luxury,165,Regular,478.5
+Provincial,Luxury,165,Student/Elderly/PWD,382.75
+Provincial,Luxury,170,Regular,493
+Provincial,Luxury,170,Student/Elderly/PWD,394.5
+Provincial,Luxury,175,Regular,507.5
+Provincial,Luxury,175,Student/Elderly/PWD,406
+Provincial,Luxury,180,Regular,522
+Provincial,Luxury,180,Student/Elderly/PWD,417.5
+Provincial,Luxury,185,Regular,536.5
+Provincial,Luxury,185,Student/Elderly/PWD,429.25
+Provincial,Luxury,190,Regular,551
+Provincial,Luxury,190,Student/Elderly/PWD,440.75
+Provincial,Luxury,195,Regular,565.5
+Provincial,Luxury,195,Student/Elderly/PWD,452.5
+Provincial,Luxury,200,Regular,580
+Provincial,Luxury,200,Student/Elderly/PWD,464
+Provincial,Luxury,205,Regular,594.5
+Provincial,Luxury,205,Student/Elderly/PWD,475.5
+Provincial,Luxury,210,Regular,609
+Provincial,Luxury,210,Student/Elderly/PWD,487.25
+Provincial,Luxury,215,Regular,623.5
+Provincial,Luxury,215,Student/Elderly/PWD,498.75
+Provincial,Luxury,220,Regular,638
+Provincial,Luxury,220,Student/Elderly/PWD,510.5
+Provincial,Luxury,225,Regular,652.5
+Provincial,Luxury,225,Student/Elderly/PWD,522
+Provincial,Luxury,230,Regular,667
+Provincial,Luxury,230,Student/Elderly/PWD,533.5
+Provincial,Luxury,235,Regular,681.5
+Provincial,Luxury,235,Student/Elderly/PWD,545.25
+Provincial,Luxury,240,Regular,696
+Provincial,Luxury,240,Student/Elderly/PWD,556.75
+Provincial,Luxury,245,Regular,710.5
+Provincial,Luxury,245,Student/Elderly/PWD,568.5
+Provincial,Luxury,250,Regular,725
+Provincial,Luxury,250,Student/Elderly/PWD,580
+Provincial,Luxury,255,Regular,739.5
+Provincial,Luxury,255,Student/Elderly/PWD,591.5
+Provincial,Luxury,260,Regular,754
+Provincial,Luxury,260,Student/Elderly/PWD,603.25
+Provincial,Luxury,265,Regular,768.5
+Provincial,Luxury,265,Student/Elderly/PWD,614.75
+Provincial,Luxury,270,Regular,783
+Provincial,Luxury,270,Student/Elderly/PWD,626.5
+Provincial,Luxury,275,Regular,797.5
+Provincial,Luxury,275,Student/Elderly/PWD,638
+Provincial,Luxury,280,Regular,812
+Provincial,Luxury,280,Student/Elderly/PWD,649.5
+Provincial,Luxury,285,Regular,826.5
+Provincial,Luxury,285,Student/Elderly/PWD,661.25
+Provincial,Luxury,290,Regular,841
+Provincial,Luxury,290,Student/Elderly/PWD,672.75
+Provincial,Luxury,295,Regular,855.5
+Provincial,Luxury,295,Student/Elderly/PWD,684.5
+Provincial,Luxury,300,Regular,870
+Provincial,Luxury,300,Student/Elderly/PWD,696
+Provincial,Luxury,305,Regular,884.5
+Provincial,Luxury,305,Student/Elderly/PWD,707.5
+Provincial,Luxury,310,Regular,899
+Provincial,Luxury,310,Student/Elderly/PWD,719.25
+Provincial,Luxury,315,Regular,913.5
+Provincial,Luxury,315,Student/Elderly/PWD,730.75
+Provincial,Luxury,320,Regular,928
+Provincial,Luxury,320,Student/Elderly/PWD,742.5
+Provincial,Luxury,325,Regular,942.5
+Provincial,Luxury,325,Student/Elderly/PWD,754
+Provincial,Luxury,330,Regular,957
+Provincial,Luxury,330,Student/Elderly/PWD,765.5
+Provincial,Luxury,335,Regular,971.5
+Provincial,Luxury,335,Student/Elderly/PWD,777.25
+Provincial,Luxury,340,Regular,986
+Provincial,Luxury,340,Student/Elderly/PWD,788.75
+Provincial,Luxury,345,Regular,1000.5
+Provincial,Luxury,345,Student/Elderly/PWD,800.5
+Provincial,Luxury,350,Regular,1015
+Provincial,Luxury,350,Student/Elderly/PWD,812
+Provincial,Luxury,355,Regular,1029.5
+Provincial,Luxury,355,Student/Elderly/PWD,823.5
+Provincial,Luxury,360,Regular,1044
+Provincial,Luxury,360,Student/Elderly/PWD,835.25
+Provincial,Luxury,365,Regular,1058.5
+Provincial,Luxury,365,Student/Elderly/PWD,846.75
+Provincial,Luxury,370,Regular,1073
+Provincial,Luxury,370,Student/Elderly/PWD,858.5
+Provincial,Luxury,375,Regular,1087.5
+Provincial,Luxury,375,Student/Elderly/PWD,870
+Provincial,Luxury,380,Regular,1102
+Provincial,Luxury,380,Student/Elderly/PWD,881.5
+Provincial,Luxury,385,Regular,1116.5
+Provincial,Luxury,385,Student/Elderly/PWD,893.25
+Provincial,Luxury,390,Regular,1131
+Provincial,Luxury,390,Student/Elderly/PWD,904.75
+Provincial,Luxury,395,Regular,1145.5
+Provincial,Luxury,395,Student/Elderly/PWD,916.5
+Provincial,Luxury,400,Regular,1160
+Provincial,Luxury,400,Student/Elderly/PWD,928
+Provincial,Luxury,405,Regular,1174.5
+Provincial,Luxury,405,Student/Elderly/PWD,939.5
+Provincial,Luxury,410,Regular,1189
+Provincial,Luxury,410,Student/Elderly/PWD,951.25
+Provincial,Luxury,415,Regular,1203.5
+Provincial,Luxury,415,Student/Elderly/PWD,962.75
+Provincial,Luxury,420,Regular,1218
+Provincial,Luxury,420,Student/Elderly/PWD,974.5
+Provincial,Luxury,425,Regular,1232.5
+Provincial,Luxury,425,Student/Elderly/PWD,986
+Provincial,Luxury,430,Regular,1247
+Provincial,Luxury,430,Student/Elderly/PWD,997.5
+Provincial,Luxury,435,Regular,1261.5
+Provincial,Luxury,435,Student/Elderly/PWD,1009.25
+Provincial,Luxury,440,Regular,1276
+Provincial,Luxury,440,Student/Elderly/PWD,1020.75
+Provincial,Luxury,445,Regular,1290.5
+Provincial,Luxury,445,Student/Elderly/PWD,1032.5
+Provincial,Luxury,450,Regular,1305
+Provincial,Luxury,450,Student/Elderly/PWD,1044
+Provincial,Luxury,455,Regular,1319.5
+Provincial,Luxury,455,Student/Elderly/PWD,1055.5
+Provincial,Luxury,460,Regular,1334
+Provincial,Luxury,460,Student/Elderly/PWD,1067.25
+Provincial,Luxury,465,Regular,1348.5
+Provincial,Luxury,465,Student/Elderly/PWD,1078.75
+Provincial,Luxury,470,Regular,1363
+Provincial,Luxury,470,Student/Elderly/PWD,1090.5
+Provincial,Luxury,475,Regular,1377.5
+Provincial,Luxury,475,Student/Elderly/PWD,1102
+Provincial,Luxury,480,Regular,1392
+Provincial,Luxury,480,Student/Elderly/PWD,1113.5
+Provincial,Luxury,485,Regular,1406.5
+Provincial,Luxury,485,Student/Elderly/PWD,1125.25
+Provincial,Luxury,490,Regular,1421
+Provincial,Luxury,490,Student/Elderly/PWD,1136.75
+Provincial,Luxury,495,Regular,1435.5
+Provincial,Luxury,495,Student/Elderly/PWD,1148.5
+Provincial,Luxury,500,Regular,1450
+Provincial,Luxury,500,Student/Elderly/PWD,1160
+Provincial,Luxury,505,Regular,1464.5
+Provincial,Luxury,505,Student/Elderly/PWD,1171.5
+Provincial,Luxury,510,Regular,1479
+Provincial,Luxury,510,Student/Elderly/PWD,1183.25
+Provincial,Luxury,515,Regular,1493.5
+Provincial,Luxury,515,Student/Elderly/PWD,1194.75
+Provincial,Luxury,520,Regular,1508
+Provincial,Luxury,520,Student/Elderly/PWD,1206.5
+Provincial,Luxury,525,Regular,1522.5
+Provincial,Luxury,525,Student/Elderly/PWD,1218
+Provincial,Luxury,530,Regular,1537
+Provincial,Luxury,530,Student/Elderly/PWD,1229.5
+Provincial,Luxury,535,Regular,1551.5
+Provincial,Luxury,535,Student/Elderly/PWD,1241.25
+Provincial,Luxury,540,Regular,1566
+Provincial,Luxury,540,Student/Elderly/PWD,1252.75
+Provincial,Luxury,545,Regular,1580.5
+Provincial,Luxury,545,Student/Elderly/PWD,1264.5
+Provincial,Luxury,550,Regular,1595
+Provincial,Luxury,550,Student/Elderly/PWD,1276
+Provincial,Luxury,555,Regular,1609.5
+Provincial,Luxury,555,Student/Elderly/PWD,1287.5
+Provincial,Luxury,560,Regular,1624
+Provincial,Luxury,560,Student/Elderly/PWD,1299.25
+Provincial,Luxury,565,Regular,1638.5
+Provincial,Luxury,565,Student/Elderly/PWD,1310.75
+Provincial,Luxury,570,Regular,1653
+Provincial,Luxury,570,Student/Elderly/PWD,1322.5
+Provincial,Luxury,575,Regular,1667.5
+Provincial,Luxury,575,Student/Elderly/PWD,1334
+Provincial,Luxury,580,Regular,1682
+Provincial,Luxury,580,Student/Elderly/PWD,1345.5
+Provincial,Luxury,585,Regular,1696.5
+Provincial,Luxury,585,Student/Elderly/PWD,1357.25
+Provincial,Luxury,590,Regular,1711
+Provincial,Luxury,590,Student/Elderly/PWD,1368.75
+Provincial,Luxury,595,Regular,1725.5
+Provincial,Luxury,595,Student/Elderly/PWD,1380.5
+Provincial,Luxury,600,Regular,1740
+Provincial,Luxury,600,Student/Elderly/PWD,1392
