@@ -5,10 +5,6 @@ import pandas as pd
 
 
 class HabalHabalFareEstimator:
-    """
-    AI-Powered Fare Estimator using K-Nearest Neighbors algorithm
-    for habal-habal rides in Davao City
-    """
 
     def __init__(self, k=5, dataset_path=None):
         self.k = k
@@ -65,7 +61,7 @@ class HabalHabalFareEstimator:
                 self._generate_training_data()
 
     def _generate_training_data(self):
-        """Generate synthetic habal-habal fare data for Davao City"""
+
         np.random.seed(42)
         n_samples = 800
 
