@@ -10,7 +10,7 @@ class FareRequestScreen:
 
         # Initialize AI Fare Estimator with LTFRB data
         try:
-            self.fare_estimator = BusFareEstimator(k=5, dataset_path='bus_fare_ltfrb_data.csv')
+            self.fare_estimator = BusFareEstimator(dataset_path='bus_fare_ltfrb_data.csv')
         except Exception as e:
             print(f"Error loading fare estimator: {e}")
             self.fare_estimator = None
@@ -23,6 +23,7 @@ class FareRequestScreen:
         self.actual_fare = tk.StringVar(value="")
 
         self.predicted_fare = "₱--.--"
+        self.current_prediction = None
 
         # Main container with scrollbar
         self.canvas = tk.Canvas(parent_frame, bg="#1a1a1a", highlightthickness=0)
@@ -129,24 +130,19 @@ class FareRequestScreen:
         bus_frame = tk.Frame(input_frame, bg="#1a1a1a")
         bus_frame.pack(fill=tk.X, pady=(0, 15))
 
-        bus_options = ['Ordinary', 'Aircon', 'Deluxe', 'Super Deluxe', 'Luxury']
+        bus_options = ['Ordinary', 'Aircon', 'Deluxe']
         self.bus_buttons = []
-        for i, option in enumerate(bus_options):
-            if i % 3 == 0:
-                row_frame = tk.Frame(bus_frame, bg="#1a1a1a")
-                row_frame.pack(fill=tk.X, pady=2)
-
+        for option in bus_options:
             btn = tk.Button(
-                row_frame,
+                bus_frame,
                 text=option,
                 command=lambda o=option: self.select_bus_type(o),
-                font=("Arial", 9),
+                font=("Arial", 10),
                 bg="#2a2a2a",
                 fg="white",
                 activebackground="#3a3a3a",
                 relief=tk.FLAT,
-                cursor="hand2",
-                width=10
+                cursor="hand2"
             )
             btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
             self.bus_buttons.append(btn)
@@ -154,13 +150,16 @@ class FareRequestScreen:
             if option == 'Ordinary':
                 btn.config(bg="#2196f3", activebackground="#42a5f5")
                 self.selected_bus_btn = btn
+            # Disable Deluxe for City routes (default is City)
+            elif option == 'Deluxe':
+                btn.config(state=tk.DISABLED, bg="#1a1a1a", fg="#555555")
 
         # Passenger Type selector
         self._create_label(input_frame, "👤 Passenger Type")
         passenger_frame = tk.Frame(input_frame, bg="#1a1a1a")
         passenger_frame.pack(fill=tk.X, pady=(0, 15))
 
-        passenger_options = ['Regular', 'Student', 'Elderly', 'PWD']
+        passenger_options = ['Regular', 'Discounted']
         for option in passenger_options:
             btn = tk.Button(
                 passenger_frame,
@@ -171,13 +170,22 @@ class FareRequestScreen:
                 fg="white",
                 activebackground="#3a3a3a",
                 relief=tk.FLAT,
-                cursor="hand2",
-                width=8
+                cursor="hand2"
             )
             btn.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=2)
             if option == 'Regular':
                 btn.config(bg="#2196f3", activebackground="#42a5f5")
                 self.selected_passenger_btn = btn
+
+        # Add info label for discounted passengers
+        discount_info = tk.Label(
+            input_frame,
+            text="Discounted: Student, Senior Citizen, PWD (20% off)",
+            font=("Arial", 8),
+            bg="#1a1a1a",
+            fg="#999999"
+        )
+        discount_info.pack(pady=(0, 10))
 
         # Calculate button
         calculate_btn = tk.Button(
@@ -200,7 +208,7 @@ class FareRequestScreen:
 
         results_title = tk.Label(
             self.results_frame,
-            text="LTFRB-Based Fare Calculation",
+            text="🎯 KNN Prediction Results",
             font=("Arial", 12, "bold"),
             bg="#2a2a2a",
             fg="#2196f3"
@@ -228,7 +236,11 @@ class FareRequestScreen:
 
         # Fare breakdown
         self.breakdown_frame = tk.Frame(self.results_frame, bg="#2a2a2a")
-        self.breakdown_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
+        self.breakdown_frame.pack(fill=tk.X, padx=15, pady=(0, 10))
+
+        # Similar trips section (neighbors)
+        self.neighbors_frame = tk.Frame(self.results_frame, bg="#2a2a2a")
+        self.neighbors_frame.pack(fill=tk.X, padx=15, pady=(0, 15))
 
         # Compliance Check Section
         check_frame = tk.Frame(self.main_frame, bg="#1a1a1a")
@@ -308,13 +320,31 @@ class FareRequestScreen:
                 widget.config(bg="#2196f3", activebackground="#42a5f5")
                 self.selected_route_btn = widget
 
+        # Enable/disable bus types based on route
+        if route == 'City':
+            # Disable Deluxe for City routes
+            for btn in self.bus_buttons:
+                if btn['text'] == 'Deluxe':
+                    btn.config(state=tk.DISABLED, bg="#1a1a1a", fg="#555555")
+                else:
+                    btn.config(state=tk.NORMAL)
+
+            # If current selection is Deluxe, switch to Ordinary
+            if self.bus_type.get() == 'Deluxe':
+                self.select_bus_type('Ordinary')
+        else:
+            # Enable all bus types for Provincial routes
+            for btn in self.bus_buttons:
+                btn.config(state=tk.NORMAL, fg="white")
+
     def select_bus_type(self, bus):
         """Update bus type selection"""
         self.bus_type.set(bus)
 
         # Reset all bus button styles
         for btn in self.bus_buttons:
-            btn.config(bg="#2a2a2a", activebackground="#3a3a3a")
+            if btn['state'] != tk.DISABLED:
+                btn.config(bg="#2a2a2a", activebackground="#3a3a3a")
 
         # Highlight selected
         for btn in self.bus_buttons:
@@ -357,6 +387,8 @@ class FareRequestScreen:
                 passenger_type=self.passenger_type.get()
             )
 
+            self.current_prediction = prediction
+
             # Get fare breakdown
             breakdown = self.fare_estimator.get_fare_breakdown(
                 distance=distance,
@@ -370,25 +402,40 @@ class FareRequestScreen:
                 text=f"₱{prediction['predicted_fare']:.2f}"
             )
 
-            confidence_text = f"Confidence: {prediction['confidence_level']} | Range: ₱{prediction['confidence_lower']:.2f} - ₱{prediction['confidence_upper']:.2f}"
+            confidence_text = (f"Confidence: {prediction['confidence_level']} | "
+                               f"Range: ₱{prediction['confidence_lower']:.2f} - ₱{prediction['confidence_upper']:.2f} "
+                               f"(σ=₱{prediction['std_dev']:.2f})")
             self.confidence_label.config(text=confidence_text)
 
             # Clear and rebuild breakdown
             for widget in self.breakdown_frame.winfo_children():
                 widget.destroy()
 
+            # Title for breakdown
+            tk.Label(
+                self.breakdown_frame,
+                text="📊 Fare Composition Analysis",
+                font=("Arial", 10, "bold"),
+                bg="#2a2a2a",
+                fg="#2196f3"
+            ).pack(pady=(5, 8))
+
             breakdown_items = [
                 ("Route Type", breakdown['route_type']),
                 ("Bus Type", breakdown['bus_type']),
                 ("Base Fare", f"₱{breakdown['base_fare']:.2f}"),
                 ("Distance Charge", f"₱{breakdown['distance_charge']:.2f}"),
+                ("Formula Estimate", f"₱{breakdown['formula_estimate']:.2f}"),
             ]
 
             if breakdown['passenger_discount'] > 0:
                 breakdown_items.append(("Passenger Discount", f"-{breakdown['passenger_discount']}%"))
 
             if breakdown['bus_premium'] > 0:
-                breakdown_items.append(("Bus Premium", f"+{breakdown['bus_premium']}%"))
+                breakdown_items.append(("Bus Premium", f"+₱{breakdown['bus_premium']:.2f}"))
+
+            breakdown_items.append(("KNN Adjustment", f"₱{breakdown['knn_adjustment']:.2f}"))
+            breakdown_items.append(("Final KNN Prediction", f"₱{breakdown['predicted_fare']:.2f}"))
 
             for label, value in breakdown_items:
                 item_frame = tk.Frame(self.breakdown_frame, bg="#2a2a2a")
@@ -403,19 +450,76 @@ class FareRequestScreen:
                     anchor="w"
                 ).pack(side=tk.LEFT)
 
+                # Highlight final prediction
+                fg_color = "#4caf50" if label == "Final KNN Prediction" else "#2196f3"
+                font_weight = "bold" if label == "Final KNN Prediction" else "normal"
+
                 tk.Label(
                     item_frame,
                     text=value,
-                    font=("Arial", 9, "bold"),
+                    font=("Arial", 9, font_weight),
                     bg="#2a2a2a",
-                    fg="#2196f3",
+                    fg=fg_color,
                     anchor="e"
                 ).pack(side=tk.RIGHT)
+
+            # Display similar trips (neighbors)
+            self._display_neighbors(prediction['neighbor_info'])
 
         except ValueError:
             self.show_error("Invalid input. Please check your entries.")
         except Exception as e:
             self.show_error(f"Error: {str(e)}")
+
+    def _display_neighbors(self, neighbor_info):
+        """Display the K nearest neighbor trips used for prediction"""
+        # Clear previous neighbors
+        for widget in self.neighbors_frame.winfo_children():
+            widget.destroy()
+
+        # Title
+        tk.Label(
+            self.neighbors_frame,
+            text=f"🔍 Similar Trips Used (K={len(neighbor_info)} neighbors)",
+            font=("Arial", 10, "bold"),
+            bg="#2a2a2a",
+            fg="#2196f3"
+        ).pack(pady=(10, 5))
+
+        tk.Label(
+            self.neighbors_frame,
+            text="These are the most similar historical trips from LTFRB data:",
+            font=("Arial", 8),
+            bg="#2a2a2a",
+            fg="#999999"
+        ).pack(pady=(0, 8))
+
+        # Display each neighbor
+        for i, neighbor in enumerate(neighbor_info, 1):
+            neighbor_box = tk.Frame(self.neighbors_frame, bg="#1e1e1e")
+            neighbor_box.pack(fill=tk.X, pady=3, padx=5)
+
+            # Neighbor header
+            header_text = f"#{i}: {neighbor['route_type']} {neighbor['bus_type']} • {neighbor['passenger_type']}"
+            tk.Label(
+                neighbor_box,
+                text=header_text,
+                font=("Arial", 8, "bold"),
+                bg="#1e1e1e",
+                fg="#42a5f5",
+                anchor="w"
+            ).pack(fill=tk.X, padx=8, pady=(4, 2))
+
+            # Neighbor details
+            details_text = f"Distance: {neighbor['distance_km']}km → Fare: ₱{neighbor['fare']:.2f}"
+            tk.Label(
+                neighbor_box,
+                text=details_text,
+                font=("Arial", 8),
+                bg="#1e1e1e",
+                fg="#cccccc",
+                anchor="w"
+            ).pack(fill=tk.X, padx=8, pady=(0, 4))
 
     def check_compliance(self):
         """Check if actual fare complies with LTFRB standards"""
@@ -479,7 +583,7 @@ class FareRequestScreen:
             else:
                 ok_label = tk.Label(
                     result_frame,
-                    text="✓ Fare is within LTFRB acceptable range",
+                    text="✅ Fare is within LTFRB acceptable range",
                     font=("Arial", 9),
                     bg="#2a2a2a",
                     fg="#4caf50"

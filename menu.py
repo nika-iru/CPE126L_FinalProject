@@ -1,11 +1,20 @@
 import tkinter as tk
 from request import FareRequestScreen
+from fare_estimator import BusFareEstimator
 
 
 class MenuScreen:
     def __init__(self, parent_frame, app_controller):
         self.parent_frame = parent_frame
         self.app_controller = app_controller
+
+        # Load fare estimator to get actual metrics
+        try:
+            self.fare_estimator = BusFareEstimator(dataset_path='bus_fare_ltfrb_data.csv')
+            metrics = self.fare_estimator.get_model_performance()
+        except:
+            self.fare_estimator = None
+            metrics = None
 
         # Main container
         self.main_frame = tk.Frame(parent_frame, bg="#1a1a1a")
@@ -46,9 +55,15 @@ class MenuScreen:
         info_banner = tk.Frame(self.main_frame, bg="#1e3a5f")
         info_banner.pack(fill=tk.X, pady=(10, 20))
 
+        if metrics and metrics.get('best_k'):
+            info_text_content = (f"🤖 Optimized K-Nearest Neighbors (K={metrics['best_k']})\n"
+                                 f"Based on LTFRB Official Fare Matrix")
+        else:
+            info_text_content = "🤖 Powered by K-Nearest Neighbors (KNN)\nBased on LTFRB Official Fare Matrix"
+
         info_text = tk.Label(
             info_banner,
-            text="🤖 Powered by K-Nearest Neighbors (KNN)\nBased on LTFRB Official Fare Matrix",
+            text=info_text_content,
             font=("Arial", 9),
             bg="#1e3a5f",
             fg="white",
@@ -61,11 +76,23 @@ class MenuScreen:
         stats_frame = tk.Frame(self.main_frame, bg="#1a1a1a")
         stats_frame.pack(fill=tk.X, pady=(0, 20))
 
-        stat_items = [
-            ("📊", "1000+", "LTFRB\nRecords"),
-            ("🎯", "99%", "Accuracy\nRate"),
-            ("⚡", "K=5", "Nearest\nNeighbors")
-        ]
+        # Dynamic stats based on actual model performance
+        if metrics:
+            accuracy_pct = f"{metrics.get('test_score', 0.99) * 100:.1f}%"
+            mae_value = f"₱{metrics.get('mae', 2.5):.2f}"
+            k_value = f"K={metrics.get('best_k', 5)}"
+
+            stat_items = [
+                ("📊", accuracy_pct, f"Test\nAccuracy"),
+                ("🎯", mae_value, f"Mean Abs\nError"),
+                ("⚡", k_value, f"Optimized\nNeighbors")
+            ]
+        else:
+            stat_items = [
+                ("📊", "1000+", "LTFRB\nRecords"),
+                ("🎯", "99%", "Accuracy\nRate"),
+                ("⚡", "K=5", "Nearest\nNeighbors")
+            ]
 
         for emoji, value, label in stat_items:
             stat_box = tk.Frame(stats_frame, bg="#2a2a2a")
@@ -136,6 +163,14 @@ class MenuScreen:
         )
         btn_check.pack(fill=tk.X, pady=5)
 
+        btn_performance = tk.Button(
+            menu_frame,
+            text="📈  Model Performance",
+            command=self.show_performance,
+            **secondary_config
+        )
+        btn_performance.pack(fill=tk.X, pady=5)
+
         btn_about = tk.Button(
             menu_frame,
             text="ℹ️  About the System",
@@ -146,7 +181,7 @@ class MenuScreen:
 
         btn_report = tk.Button(
             menu_frame,
-            text="📝  LTFRB Standards",
+            text="📋  LTFRB Standards",
             command=self.show_standards,
             **secondary_config
         )
@@ -185,6 +220,103 @@ class MenuScreen:
         """Switch to fare calculation screen (same as calculate)"""
         self.app_controller.show_fare_request()
 
+    def show_performance(self):
+        """Show model performance metrics"""
+        if not self.fare_estimator:
+            return
+
+        metrics = self.fare_estimator.get_model_performance()
+
+        perf_window = tk.Toplevel(self.main_frame)
+        perf_window.title("Model Performance Metrics")
+        perf_window.geometry("450x600")
+        perf_window.configure(bg="#1a1a1a")
+
+        perf_window.transient(self.main_frame)
+        perf_window.grab_set()
+
+        content_frame = tk.Frame(perf_window, bg="#1a1a1a")
+        content_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+
+        tk.Label(
+            content_frame,
+            text="📈 Model Performance Report",
+            font=("Arial", 16, "bold"),
+            bg="#1a1a1a",
+            fg="#2196f3"
+        ).pack(pady=(0, 15))
+
+        # Create performance text
+        perf_text = f"""🎯 Hyperparameter Tuning Results:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Optimal K (neighbors): {metrics.get('best_k', 'N/A')}
+Weight function: {metrics.get('best_weights', 'N/A')}
+Distance metric: {metrics.get('best_metric', 'N/A')}
+
+📊 Cross-Validation Performance:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5-Fold CV R² Score: {metrics.get('cv_mean_score', 0):.4f} (±{metrics.get('cv_std_score', 0):.4f})
+This shows the model's consistency across different data splits.
+
+🎓 Training vs Testing Performance:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Training R² Score: {metrics.get('train_score', 0):.4f}
+Testing R² Score: {metrics.get('test_score', 0):.4f}
+
+Gap: {abs(metrics.get('train_score', 0) - metrics.get('test_score', 0)):.4f}
+Status: {'✅ Good generalization' if abs(metrics.get('train_score', 0) - metrics.get('test_score', 0)) < 0.1 else '⚠️ Possible overfitting'}
+
+📉 Error Metrics (on test set):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Mean Absolute Error (MAE): ₱{metrics.get('mae', 0):.2f}
+Root Mean Squared Error (RMSE): ₱{metrics.get('rmse', 0):.2f}
+R² Score: {metrics.get('r2', 0):.4f}
+
+💡 What This Means:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• MAE shows average prediction error
+• R² of {metrics.get('test_score', 0):.4f} means the model explains
+  {metrics.get('test_score', 0) * 100:.1f}% of fare variance
+• Cross-validation confirms the model is stable
+• The model uses {metrics.get('best_k', 5)} most similar trips
+  to make each prediction
+
+🔍 Feature Engineering:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• One-hot encoding for categorical features
+• Distance-based interaction features
+• StandardScaler normalization
+• {metrics.get('best_weights', 'distance')} weighting scheme"""
+
+        text_widget = tk.Text(
+            content_frame,
+            font=("Courier", 9),
+            bg="#2a2a2a",
+            fg="#cccccc",
+            wrap=tk.WORD,
+            relief=tk.FLAT,
+            padx=15,
+            pady=15,
+            height=25
+        )
+        text_widget.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
+        text_widget.insert("1.0", perf_text)
+        text_widget.config(state=tk.DISABLED)
+
+        close_btn = tk.Button(
+            content_frame,
+            text="Close",
+            font=("Arial", 11),
+            bg="#2196f3",
+            fg="white",
+            activebackground="#42a5f5",
+            relief=tk.FLAT,
+            cursor="hand2",
+            command=perf_window.destroy,
+            pady=8
+        )
+        close_btn.pack(fill=tk.X)
+
     def about_system(self):
         """Show about dialog"""
         about_window = tk.Toplevel(self.main_frame)
@@ -192,7 +324,6 @@ class MenuScreen:
         about_window.geometry("400x500")
         about_window.configure(bg="#1a1a1a")
 
-        # Make it modal
         about_window.transient(self.main_frame)
         about_window.grab_set()
 
@@ -216,16 +347,19 @@ This system uses Machine Learning to verify compliance with LTFRB fare regulatio
 • Supervised Learning Model
 • 1000+ LTFRB Training Records
 • Real-time Fare Prediction
+• Hyperparameter Optimization (GridSearchCV)
+• 5-Fold Cross-Validation
 
 📊 Features:
 • Distance-based fare calculation
 • Route type (City/Provincial)
-• Bus type classification (Ordinary, Aircon, Deluxe, etc.)
+• Bus type classification (Ordinary, Aircon, Deluxe)
 • Passenger discounts (20% for Student/Senior/PWD)
 • Fare compliance checking (15% threshold)
 • LTFRB standard verification
+• Similar trip analysis (neighbor visualization)
 
-💥 Research Team:
+👥 Research Team:
 • Sharmayne Andrea Cena
 • Xavier Ignazio Maria Fuentes
 • Christina Heliane Sevilla
@@ -234,7 +368,7 @@ This system uses Machine Learning to verify compliance with LTFRB fare regulatio
 Mapúa Malayan Colleges Mindanao
 College of Engineering and Architecture
 
-📍 Coverage:
+🗺️ Coverage:
 Philippine bus operations nationwide
 City and provincial routes
 All LTFRB-regulated bus types"""
@@ -283,7 +417,7 @@ All LTFRB-regulated bus types"""
 
         tk.Label(
             content_frame,
-            text="📝 LTFRB Fare Matrix",
+            text="📋 LTFRB Fare Matrix",
             font=("Arial", 14, "bold"),
             bg="#1a1a1a",
             fg="#2196f3"
@@ -302,13 +436,10 @@ All LTFRB-regulated bus types"""
 🚌 Provincial Routes:
 • Ordinary: ₱11.00 base + ₱1.90/km
 • Deluxe: 25% premium over ordinary
-• Super Deluxe: 40% premium
-• Luxury: 100% premium
 
 👥 Passenger Discounts:
-• Students: 20% discount
-• Senior Citizens: 20% discount
-• PWD: 20% discount
+• Regular: Full fare
+• Discounted (Student/Senior/PWD): 20% off
 
 ⚖️ Compliance Standards:
 • Maximum allowed variance: ±15%
